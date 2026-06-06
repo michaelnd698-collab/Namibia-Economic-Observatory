@@ -478,6 +478,45 @@ button:hover{
 .section-grey{
     background:#f5f7fa;
 }
+
+/* ECONOMIC TICKER */
+
+.ticker{
+
+background:#002244;
+
+color:white;
+
+overflow:hidden;
+
+white-space:nowrap;
+
+padding:12px 0;
+
+font-weight:bold;
+
+position:relative;
+}
+
+.ticker-content{
+
+display:inline-block;
+
+padding-left:100%;
+
+animation:ticker 25s linear infinite;
+}
+
+@keyframes ticker{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-100%);
+}
+}
     
 /* FOOTER */
 
@@ -532,6 +571,26 @@ footer{
 
 <body>
 
+<!-- ECONOMIC TICKER -->
+
+<div class="ticker">
+
+<div class="ticker-content">
+
+📈 Inflation: 4.2% &nbsp;&nbsp; | &nbsp;&nbsp;
+
+🏦 Repo Rate: 6.75% &nbsp;&nbsp; | &nbsp;&nbsp;
+
+💵 USD/NAD: 18.52 &nbsp;&nbsp; | &nbsp;&nbsp;
+
+📊 GDP Growth: 3.8% &nbsp;&nbsp; | &nbsp;&nbsp;
+
+📉 Unemployment: 36.9%
+
+</div>
+
+</div>
+    
 <!-- HERO -->
 
 <section class="hero">
