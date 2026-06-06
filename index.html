@@ -969,3 +969,38 @@ are currently under development.
 Built by Mr Michael Ndiiwda Henok
 
 </footer>
+
+<script>
+
+function searchSite(){
+
+let input =
+document.getElementById("searchInput")
+.value.toLowerCase();
+
+let sections =
+document.querySelectorAll(".searchable");
+
+sections.forEach(function(section){
+
+let text =
+section.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+section.style.display="block";
+
+}else{
+
+section.style.display="none";
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
