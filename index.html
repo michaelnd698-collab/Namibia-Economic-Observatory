@@ -559,7 +559,47 @@ footer{
 
     margin-top:40px;
 }
+    
+/* INFLATION DASHBOARD */
 
+.kpi-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.kpi-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.kpi-card:hover{
+    transform:translateY(-8px);
+}
+
+.kpi-card h3{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.kpi-card h1{
+    color:#0077cc;
+    font-size:45px;
+}
+
+.chart-container{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+    
 /* MOBILE */
 
 @media(max-width:768px){
