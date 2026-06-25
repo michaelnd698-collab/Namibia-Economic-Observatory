@@ -1082,6 +1082,8 @@ with neighbouring Southern African economies.
 
 <!-- INFLATION DASHBOARD -->
 
+<div id="inflationDashboard">
+
 <div class="card section-grey">
 
 <div class="dashboard-header">
@@ -1096,15 +1098,13 @@ Namibia Inflation Dashboard
 </h2>
 
 <button class="nav-btn"
-onclick="nextDashboard()">
+onclick="showCostDashboard()">
 Next ▶
 </button>
 
 </div>
 
-<p
-id="dashboardDescription"
-style="text-align:center; margin-bottom:30px;">
+<p style="text-align:center; margin-bottom:30px;">
 
 Latest inflation indicators for Namibia.
 
@@ -1139,7 +1139,6 @@ Latest inflation indicators for Namibia.
 <select id="regionSelect">
 
 <option>All Regions</option>
-
 <option>Khomas</option>
 <option>Erongo</option>
 <option>Hardap</option>
@@ -1158,58 +1157,14 @@ Latest inflation indicators for Namibia.
 </select>
 
 </div>
-    
+
 <div class="chart-container">
 
 <canvas id="inflationChart"></canvas>
 
 </div>
 
-<h3 style="margin-top:35px;">
-Monthly Cost Breakdown
-</h3>
-
-<table class="cost-table">
-
-<tr>
-<th>Item</th>
-<th>Cost (N$)</th>
-</tr>
-
-<tr>
-<td>Bread</td>
-<td>25</td>
-</tr>
-
-<tr>
-<td>Milk</td>
-<td>22</td>
-</tr>
-
-<tr>
-<td>Rice</td>
-<td>45</td>
-</tr>
-
-<tr>
-<td>Taxi Fare</td>
-<td>14</td>
-</tr>
-
-<tr>
-<td>Electricity</td>
-<td>500</td>
-</tr>
-
-</table>
-
-<div style="text-align:center; margin-top:30px;">
-
-<button>
-
-Download Cost of Living Data (CSV)
-
-</button>
+</div>
 
 </div>
     
