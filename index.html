@@ -1600,20 +1600,44 @@ document.getElementById(
 ).style.display="none";
 
 document.getElementById(
+"housingDashboard"
+).style.display="none";
+
+document.getElementById(
 "costDashboard"
 ).style.display="block";
 
 }
 
-function showInflationDashboard(){
+function showHousingDashboard(){
+
+document.getElementById(
+"inflationDashboard"
+).style.display="none";
 
 document.getElementById(
 "costDashboard"
 ).style.display="none";
 
 document.getElementById(
+"housingDashboard"
+).style.display="block";
+
+}
+    
+function showInflationDashboard(){
+
+document.getElementById(
 "inflationDashboard"
 ).style.display="block";
+
+document.getElementById(
+"costDashboard"
+).style.display="none";
+
+document.getElementById(
+"housingDashboard"
+).style.display="none";
 
 }
 
