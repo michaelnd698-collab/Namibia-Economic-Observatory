@@ -1265,7 +1265,8 @@ onclick="showCostDashboard()">
 Housing Affordability Dashboard
 </h2>
 
-<button class="nav-btn">
+<button class="nav-btn"
+onclick="showEmploymentDashboard()">
 Next ▶
 </button>
 
@@ -1376,6 +1377,175 @@ Monthly housing costs and affordability indicators across Namibia.
 <button>
 
 Download Housing Data (CSV)
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- EMPLOYMENT DASHBOARD -->
+
+<div id="employmentDashboard" style="display:none;">
+
+<div class="card section-grey">
+
+<div class="dashboard-header">
+
+<button class="nav-btn"
+onclick="showHousingDashboard()">
+
+◀ Previous
+
+</button>
+
+<h2>
+
+Employment & Wages Dashboard
+
+</h2>
+
+<button class="nav-btn">
+
+Next ▶
+
+</button>
+
+</div>
+
+<p style="text-align:center; margin-bottom:30px;">
+
+Labour market indicators and wage statistics for Namibia.
+
+</p>
+
+<div class="kpi-grid">
+
+<div class="kpi-card">
+
+<h3>Average Monthly Wage</h3>
+
+<h1>N$ 8,500</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>Minimum Wage</h3>
+
+<h1>N$ 18/hr</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>Employment Rate</h3>
+
+<h1>56%</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>Unemployment Rate</h3>
+
+<h1>36%</h1>
+
+</div>
+
+</div>
+
+<h3 style="margin-top:35px;">
+
+Employment & Wage Statistics
+
+</h3>
+
+<table class="cost-table">
+
+<tr>
+
+<th>Indicator</th>
+
+<th>Value</th>
+
+</tr>
+
+<tr>
+
+<td>Average Monthly Wage</td>
+
+<td>N$ 8,500</td>
+
+</tr>
+
+<tr>
+
+<td>Minimum Wage</td>
+
+<td>N$ 18/hour</td>
+
+</tr>
+
+<tr>
+
+<td>Employment Rate</td>
+
+<td>56%</td>
+
+</tr>
+
+<tr>
+
+<td>Unemployment Rate</td>
+
+<td>36%</td>
+
+</tr>
+
+<tr>
+
+<td>Youth Unemployment</td>
+
+<td>44%</td>
+
+</tr>
+
+<tr>
+
+<td>Labour Force Participation</td>
+
+<td>64%</td>
+
+</tr>
+
+<tr>
+
+<td>Formal Employment</td>
+
+<td>420,000</td>
+
+</tr>
+
+<tr>
+
+<td>Informal Employment</td>
+
+<td>230,000</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<div style="text-align:center;">
+
+<button>
+
+Download Employment Data (CSV)
 
 </button>
 
@@ -1604,6 +1774,10 @@ document.getElementById(
 ).style.display="none";
 
 document.getElementById(
+"employmentDashboard"
+).style.display="none";
+
+document.getElementById(
 "costDashboard"
 ).style.display="block";
 
@@ -1620,7 +1794,31 @@ document.getElementById(
 ).style.display="none";
 
 document.getElementById(
+"employmentDashboard"
+).style.display="none";
+
+document.getElementById(
 "housingDashboard"
+).style.display="block";
+
+}
+
+function showEmploymentDashboard(){
+
+document.getElementById(
+"inflationDashboard"
+).style.display="none";
+
+document.getElementById(
+"costDashboard"
+).style.display="none";
+
+document.getElementById(
+"housingDashboard"
+).style.display="none";
+
+document.getElementById(
+"employmentDashboard"
 ).style.display="block";
 
 }
@@ -1637,6 +1835,10 @@ document.getElementById(
 
 document.getElementById(
 "housingDashboard"
+).style.display="none";
+
+document.getElementById(
+"employmentDashboard"
 ).style.display="none";
 
 }
