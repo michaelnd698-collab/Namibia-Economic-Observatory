@@ -1411,11 +1411,12 @@ Employment & Wages Dashboard
 
 <button class="nav-btn">
 
+<button class="nav-btn"
+onclick="showTradeDashboard()">
+
 Next ▶
 
 </button>
-
-</div>
 
 <p style="text-align:center; margin-bottom:30px;">
 
@@ -1556,6 +1557,165 @@ Download Employment Data (CSV)
 </div>
 
 </div>
+
+<!-- TRADE & EXCHANGE RATES DASHBOARD -->
+
+<div id="tradeDashboard" style="display:none;">
+
+<div class="card section-grey">
+
+<div class="dashboard-header">
+
+<button class="nav-btn"
+onclick="showEmploymentDashboard()">
+
+◀ Previous
+
+</button>
+
+<h2>
+
+Trade & Exchange Rates Dashboard
+
+</h2>
+
+<button class="nav-btn">
+
+Next ▶
+
+</button>
+
+</div>
+
+<p style="text-align:center; margin-bottom:30px;">
+
+Exchange rate movements and Namibia's international trade indicators.
+
+</p>
+
+<div class="kpi-grid">
+
+<div class="kpi-card">
+
+<h3>USD / NAD</h3>
+
+<h1>18.50</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>EUR / NAD</h3>
+
+<h1>21.20</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>GBP / NAD</h3>
+
+<h1>24.70</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>ZAR / NAD</h3>
+
+<h1>1.00</h1>
+
+</div>
+
+</div>
+
+<div class="chart-container">
+
+<canvas id="tradeChart"></canvas>
+
+</div>
+
+<h3 style="margin-top:35px;">
+
+Trade Summary
+
+</h3>
+
+<table class="cost-table">
+
+<tr>
+
+<th>Indicator</th>
+
+<th>Value</th>
+
+</tr>
+
+<tr>
+
+<td>Total Exports</td>
+
+<td>N$ 52 Billion</td>
+
+</tr>
+
+<tr>
+
+<td>Total Imports</td>
+
+<td>N$ 58 Billion</td>
+
+</tr>
+
+<tr>
+
+<td>Trade Balance</td>
+
+<td>-N$ 6 Billion</td>
+
+</tr>
+
+<tr>
+
+<td>Top Export</td>
+
+<td>Diamonds</td>
+
+</tr>
+
+<tr>
+
+<td>Top Import</td>
+
+<td>Petroleum Products</td>
+
+</tr>
+
+<tr>
+
+<td>Main Trading Partner</td>
+
+<td>South Africa</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<div style="text-align:center;">
+
+<button>
+
+Download Trade Data (CSV)
+
+</button>
+
+</div>
+
+</div>
+
+</div>
     
 <!-- FOOTER -->
 
@@ -1664,6 +1824,64 @@ beginAtZero:false
 
 </script>
 
+<script>
+    
+const tradeCtx =
+document.getElementById('tradeChart');
+
+if(tradeCtx){
+
+new Chart(tradeCtx,{
+
+type:'line',
+
+data:{
+
+labels:[
+'Jan',
+'Feb',
+'Mar',
+'Apr',
+'May',
+'Jun'
+],
+
+datasets:[{
+
+label:'USD/NAD',
+
+data:[
+18.1,
+18.3,
+18.4,
+18.2,
+18.5,
+18.5
+],
+
+borderColor:'#009966',
+
+backgroundColor:
+'rgba(0,153,102,0.2)',
+
+fill:true,
+
+tension:0.4
+
+}]
+
+},
+
+options:{
+responsive:true
+}
+
+});
+
+}
+
+</script>
+    
 <script>
 
 const dashboards = [
@@ -1783,6 +2001,10 @@ document.getElementById(
 "costDashboard"
 ).style.display="block";
 
+document.getElementById(
+"tradeDashboard"
+).style.display="none";
+    
 }
 
 function showHousingDashboard(){
@@ -1803,6 +2025,10 @@ document.getElementById(
 "housingDashboard"
 ).style.display="block";
 
+document.getElementById(
+"tradeDashboard"
+).style.display="none";
+    
 }
 
 function showEmploymentDashboard(){
@@ -1820,10 +2046,38 @@ document.getElementById(
 ).style.display="none";
 
 document.getElementById(
+"tradeDashboard"
+).style.display="none";
+
+document.getElementById(
 "employmentDashboard"
 ).style.display="block";
 
 }
+
+function showTradeDashboard(){
+
+document.getElementById(
+"inflationDashboard"
+).style.display="none";
+
+document.getElementById(
+"costDashboard"
+).style.display="none";
+
+document.getElementById(
+"housingDashboard"
+).style.display="none";
+
+document.getElementById(
+"employmentDashboard"
+).style.display="none";
+
+document.getElementById(
+"tradeDashboard"
+).style.display="block";
+
+}    
     
 function showInflationDashboard(){
 
@@ -1843,6 +2097,10 @@ document.getElementById(
 "employmentDashboard"
 ).style.display="none";
 
+document.getElementById(
+"tradeDashboard"
+).style.display="none";
+    
 }
 
 </script>
