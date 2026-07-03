@@ -354,48 +354,234 @@ margin-bottom:15px;
     font-size:38px;
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
+
+.about-subtitle{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:40px;
+
+font-size:20px;
+
+}
 
 .about-content{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:center;
-    gap:40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-start;
+
+gap:50px;
+
+flex-wrap:wrap;
+
 }
 
 .about-text{
-    flex:1;
-    min-width:300px;
-    font-size:18px;
+
+flex:2;
+
+font-size:18px;
+
+line-height:1.9;
+
 }
 
 .founder{
-    text-align:center;
+
+flex:1;
+
+text-align:center;
+
 }
 
 .founder img{
-    width:220px;
-    height:230px;
 
-    object-fit:cover;
+width:270px;
 
-    border-radius:0px;
+height:300px;
 
-    border:5px solid #0077cc;
+object-fit:cover;
 
-    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+border:4px solid #1565c0;
 
-    transition:0.3s;
+border-radius:12px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+transition:.4s;
+
 }
 
 .founder img:hover{
-    transform:scale(1.05);
+
+transform:translateY(-8px);
+
 }
 
 .founder h3{
-    margin-top:15px;
-    color:#003366;
+
+margin-top:20px;
+
+color:#0b3b75;
+
+font-size:32px;
+
+}
+
+.founder p{
+
+color:#555;
+
+margin-top:10px;
+
+font-size:18px;
+
+}
+
+.founder-badge{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 25px;
+
+background:#edf5ff;
+
+border-radius:30px;
+
+font-weight:bold;
+
+color:#0b3b75;
+
+}
+
+.info-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+margin-top:35px;
+
+}
+
+.info-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.info-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.info-card i{
+
+font-size:40px;
+
+color:#0077cc;
+
+margin-bottom:15px;
+
+}
+
+.gallery-container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.gallery{
+
+display:flex;
+
+gap:20px;
+
+overflow-x:auto;
+
+scroll-behavior:smooth;
+
+padding:10px;
+
+}
+
+.gallery img{
+
+width:220px;
+
+height:160px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+transition:.3s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+.gallery-btn{
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#0077cc;
+
+color:white;
+
+font-size:24px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.gallery-btn:hover{
+
+background:#005fa3;
+
 }
 
 /* FOCUS AREA CARDS */
@@ -839,6 +1025,10 @@ onkeyup="searchSite()">
 
 <h2>About Us</h2>
 
+<p class="about-subtitle">
+Empowering Namibia with reliable economic insights.
+</p>
+
 <div class="about-content">
 
 <div class="about-text">
@@ -846,31 +1036,153 @@ onkeyup="searchSite()">
 <p>
 
 The Namibia Economic Observatory was founded by
-Michael Ndiiwda Henok,
-an upcoming economist with experience and knowledge
-gained from the University of Namibia and international
-internship exposure.
+Michael Ndiiwda Henok, an upcoming economist with
+experience gained from the University of Namibia and
+international internship exposure.
 
-The platform aims to bring market research,
-data analytics and visualization to Namibian economic
-information users by transforming complex economic data
-into understandable insights and interactive visual intelligence.
+The Observatory transforms complex economic data into
+clear insights, dashboards and visual intelligence for
+researchers, students, businesses, policy makers and the
+general public.
 
-Our mission is to provide accessible, data-driven
-economic insights for Namibia through research,
-analytics and visualization.
+Our mission is to provide accessible, reliable and
+data-driven economic information that supports better
+decision-making in Namibia.
+
+</p>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<i class="fa-solid fa-bullseye"></i>
+
+<h3>Our Mission</h3>
+
+<p>
+
+Deliver accessible economic intelligence through
+research, analytics and visualization.
 
 </p>
 
 </div>
 
+<div class="info-card">
+
+<i class="fa-solid fa-eye"></i>
+
+<h3>Our Vision</h3>
+
+<p>
+
+Become Namibia's leading source of economic
+information and visual analytics.
+
+</p>
+
+</div>
+
+<div class="info-card">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<h3>What We Do</h3>
+
+<p>
+
+Research • Dashboards • Statistics • Market Analysis
+
+</p>
+
+</div>
+
+<div class="info-card">
+
+<i class="fa-solid fa-handshake"></i>
+
+<h3>Our Promise</h3>
+
+<p>
+
+Reliable, independent and understandable
+economic insights.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 <div class="founder">
 
-<img src="file_0000000010e8722fb5942dc24d476e29.png" alt="Founder">
+<img src="file_0000000010e8722fb5942dc24d476e29.png">
 
 <h3>Founder: Michael Ndiiwda Henok</h3>
 
+<p>
+
+<i class="fa-solid fa-briefcase"></i>
+
+Economist |
+Researcher |
+Data Analyst
+
+</p>
+
+<div class="founder-badge">
+
+<i class="fa-solid fa-calendar"></i>
+
+Founded in 2026
+
 </div>
+
+</div>
+
+</div>
+
+<hr>
+
+<h2 style="margin-top:30px;">
+Gallery
+</h2>
+
+<p style="text-align:center;color:#666;">
+
+Explore moments from the Namibia Economic Observatory.
+
+</p>
+
+<div class="gallery-container">
+
+<button class="gallery-btn">
+
+❮
+
+</button>
+
+<div class="gallery">
+
+<img src="gallery1.jpg">
+
+<img src="gallery2.jpg">
+
+<img src="gallery3.jpg">
+
+<img src="gallery4.jpg">
+
+<img src="gallery5.jpg">
+
+</div>
+
+<button class="gallery-btn">
+
+❯
+
+</button>
 
 </div>
 
