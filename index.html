@@ -1885,7 +1885,8 @@ Trade & Exchange Rates Dashboard
 
 </h2>
 
-<button class="nav-btn">
+<button class="nav-btn"
+onclick="showRegionalDashboard()">
 
 Next ▶
 
@@ -2014,6 +2015,209 @@ Trade Summary
 <button>
 
 Download Trade Data (CSV)
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- REGIONAL COMPARISON DASHBOARD -->
+
+<div id="regionalDashboard" style="display:none;">
+
+<div class="card section-grey">
+
+<div class="dashboard-header">
+
+<button class="nav-btn"
+onclick="showTradeDashboard()">
+
+◀ Previous
+
+</button>
+
+<h2>
+
+Regional Comparison Dashboard
+
+</h2>
+
+<button class="nav-btn">
+
+Next ▶
+
+</button>
+
+</div>
+
+<p style="text-align:center; margin-bottom:30px;">
+
+Compare Namibia's 14 regions using key economic indicators.
+
+</p>
+
+<div class="kpi-grid">
+
+<div class="kpi-card">
+
+<h3>Total Regions</h3>
+
+<h1>14</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>Highest Population</h3>
+
+<h1>Khomas</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>Highest Employment</h3>
+
+<h1>Khomas</h1>
+
+</div>
+
+<div class="kpi-card">
+
+<h3>Largest Region</h3>
+
+<h1>Omaheke</h1>
+
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:35px;">
+
+<img
+src="namibia-map.png"
+style="max-width:700px;width:100%;">
+
+</div>
+
+<h3 style="margin-top:40px;">
+
+Regional Comparison Table
+
+</h3>
+
+<table class="cost-table">
+
+<tr>
+
+<th>Region</th>
+
+<th>Capital</th>
+
+<th>Population</th>
+
+<th>Employment</th>
+
+<th>Development</th>
+
+</tr>
+
+<tr>
+
+<td>Khomas</td>
+
+<td>Windhoek</td>
+
+<td>494,605</td>
+
+<td>High</td>
+
+<td>High</td>
+
+</tr>
+
+<tr>
+
+<td>Erongo</td>
+
+<td>Swakopmund</td>
+
+<td>204,000</td>
+
+<td>Medium</td>
+
+<td>High</td>
+
+</tr>
+
+<tr>
+
+<td>Oshana</td>
+
+<td>Oshakati</td>
+
+<td>242,000</td>
+
+<td>Medium</td>
+
+<td>Medium</td>
+
+</tr>
+
+<tr>
+
+<td>Omusati</td>
+
+<td>Outapi</td>
+
+<td>248,000</td>
+
+<td>Medium</td>
+
+<td>Medium</td>
+
+</tr>
+
+<tr>
+
+<td>Kavango East</td>
+
+<td>Rundu</td>
+
+<td>118,000</td>
+
+<td>Low</td>
+
+<td>Medium</td>
+
+</tr>
+
+<tr>
+
+<td>Zambezi</td>
+
+<td>Katima Mulilo</td>
+
+<td>100,000</td>
+
+<td>Low</td>
+
+<td>Medium</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<div style="text-align:center;">
+
+<button>
+
+Download Regional Data (CSV)
 
 </button>
 
@@ -2205,13 +2409,17 @@ document.getElementById(
 ).style.display="none";
 
 document.getElementById(
+"tradeDashboard"
+).style.display="none";
+
+document.getElementById(
+"regionalDashboard"
+).style.display="none";
+
+document.getElementById(
 "costDashboard"
 ).style.display="block";
 
-document.getElementById(
-"tradeDashboard"
-).style.display="none";
-    
 }
 
 function showHousingDashboard(){
@@ -2228,6 +2436,10 @@ document.getElementById(
 "employmentDashboard"
 ).style.display="none";
 
+document.getElementById(
+"regionalDashboard"
+).style.display="none";
+    
 document.getElementById(
 "housingDashboard"
 ).style.display="block";
@@ -2257,6 +2469,10 @@ document.getElementById(
 ).style.display="none";
 
 document.getElementById(
+"regionalDashboard"
+).style.display="none";
+    
+document.getElementById(
 "employmentDashboard"
 ).style.display="block";
 
@@ -2281,10 +2497,42 @@ document.getElementById(
 ).style.display="none";
 
 document.getElementById(
+"regionalDashboard"
+).style.display="none";
+
+document.getElementById(
 "tradeDashboard"
 ).style.display="block";
 
-}    
+}
+
+function showRegionalDashboard(){
+
+document.getElementById(
+"inflationDashboard"
+).style.display="none";
+
+document.getElementById(
+"costDashboard"
+).style.display="none";
+
+document.getElementById(
+"housingDashboard"
+).style.display="none";
+
+document.getElementById(
+"employmentDashboard"
+).style.display="none";
+
+document.getElementById(
+"tradeDashboard"
+).style.display="none";
+
+document.getElementById(
+"regionalDashboard"
+).style.display="block";
+
+}
     
 function showInflationDashboard(){
 
@@ -2308,6 +2556,9 @@ document.getElementById(
 "tradeDashboard"
 ).style.display="none";
     
+document.getElementById(
+"regionalDashboard"
+).style.display="none";    
 }
 
 </script>
