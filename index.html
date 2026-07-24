@@ -1251,122 +1251,6 @@ footer{
 }
 
 }
-    
-/* ==========================================
-INTERACTIVE NAMIBIA MAP
-========================================== */
-
-.map-wrapper{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-align-items:flex-start;
-
-gap:30px;
-
-margin-top:35px;
-
-}
-
-#namibiaMap{
-
-width:100%;
-
-max-width:500px;
-
-height:auto;
-
-background:#f8f9fa;
-
-border-radius:20px;
-
-padding:15px;
-
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-
-}
-
-.region{
-
-fill:#b0c4de;
-
-stroke:#ffffff;
-
-stroke-width:2;
-
-cursor:pointer;
-
-transition:0.3s;
-
-}
-
-.region:hover{
-
-fill:#0077cc;
-
-transform:scale(1.02);
-
-}
-
-.region.active{
-
-fill:#003366;
-
-}
-
-.region-info{
-
-background:white;
-
-padding:25px;
-
-border-radius:18px;
-
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-
-min-width:260px;
-
-}
-
-.region-info h3{
-
-color:#003366;
-
-margin-bottom:15px;
-
-}
-
-.region-info p{
-
-margin:10px 0;
-
-font-size:16px;
-
-}
-
-@media screen and (max-width:768px){
-
-.map-wrapper{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-.region-info{
-
-width:100%;
-
-max-width:400px;
-
-}
-
-}
 
 /* ==========================================
    RESEARCH HUB
@@ -1554,7 +1438,123 @@ color:white;
 
 transform:translateY(-5px);
 
-}  
+}
+    
+/* ==========================================
+INTERACTIVE NAMIBIA MAP
+========================================== */
+
+.map-wrapper{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+align-items:flex-start;
+
+gap:30px;
+
+margin-top:35px;
+
+}
+
+#namibiaMap{
+
+width:100%;
+
+max-width:500px;
+
+height:auto;
+
+background:#f8f9fa;
+
+border-radius:20px;
+
+padding:15px;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+}
+
+.region{
+
+fill:#b0c4de;
+
+stroke:#ffffff;
+
+stroke-width:2;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.region:hover{
+
+fill:#0077cc;
+
+transform:scale(1.02);
+
+}
+
+.region.active{
+
+fill:#003366;
+
+}
+
+.region-info{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+min-width:260px;
+
+}
+
+.region-info h3{
+
+color:#003366;
+
+margin-bottom:15px;
+
+}
+
+.region-info p{
+
+margin:10px 0;
+
+font-size:16px;
+
+}
+
+@media screen and (max-width:768px){
+
+.map-wrapper{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.region-info{
+
+width:100%;
+
+max-width:400px;
+
+}
+
+}
     
 </style>
 
