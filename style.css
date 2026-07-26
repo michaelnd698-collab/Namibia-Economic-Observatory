@@ -1469,6 +1469,12 @@ transform:scale(1.02);
 
 fill:#003366;
 
+stroke:#ffcc00;
+
+stroke-width:4;
+
+filter:drop-shadow(0 0 8px rgba(0,0,0,.35));
+
 }
 
 .region-info{
