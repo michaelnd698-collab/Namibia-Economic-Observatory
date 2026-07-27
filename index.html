@@ -94,12 +94,12 @@ dashboards and visual intelligence.
 
 <br>
 
-<a href="#dashboard-section" class="cta-btn">
+<button id="exploreBtn">
 
 Explore Data
 
-</a>
-
+</button>
+    
 <div class="social-icons">
 
 <a href="https://www.facebook.com/profile.php?id=61590328297786&mibextid=ZbWKwL" target="_blank">
@@ -1525,6 +1525,22 @@ section.style.display="none";
 }
 
 </script>
+
+<script>
+
+document.getElementById("exploreBtn").addEventListener("click", function () {
+
+document.getElementById("dashboard-section").scrollIntoView({
+
+behavior: "smooth",
+
+block: "start"
+
+});
+
+});
+    
+</script> 
     
 <script>
 
