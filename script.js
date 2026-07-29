@@ -1,3 +1,7 @@
+/* ==========================================
+   SEARCH
+========================================== */
+
 function searchSite(){
 
 let input =
@@ -26,9 +30,9 @@ section.style.display="none";
 
 }
 
-</script>
-
-<script>
+/* ==========================================
+   BUTTONS
+========================================== */
 
 document.getElementById("exploreBtn").addEventListener("click", function () {
 
@@ -42,9 +46,9 @@ block: "start"
 
 });
     
-</script> 
-    
-<script>
+/* ==========================================
+   CHART.JS
+========================================== */
 
 const ctx =
 document.getElementById('inflationChart');
@@ -109,10 +113,6 @@ beginAtZero:false
 }
 
 });
-
-</script>
-
-<script>
     
 const tradeCtx =
 document.getElementById('tradeChart');
@@ -172,9 +172,9 @@ maintainAspectRatio:false,
 
 }
 
-</script>
-    
-<script>
+/* ==========================================
+   DASHBOARD NAVIGATION
+========================================== */
 
 function showCostDashboard(){
 
@@ -343,10 +343,6 @@ document.getElementById(
 ).style.display="none";
     
 }
-    
-</script>
-
-<script>
 
 /* ==========================================
 INTERACTIVE NAMIBIA MAP
