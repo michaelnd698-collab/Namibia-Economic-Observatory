@@ -1,5 +1,3 @@
-<script>
-
 function searchSite(){
 
 let input =
@@ -507,5 +505,3 @@ document.getElementById('regionDevelopment')
 });
 
 });
-
-</script>
