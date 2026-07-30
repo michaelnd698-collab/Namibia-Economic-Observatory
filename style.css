@@ -1699,6 +1699,62 @@ padding-left:20px;
 }
 
 /* ==========================================
+   SUBMISSION PROGRESS
+========================================== */
+
+.submission-progress{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+margin-bottom:40px;
+
+text-align:center;
+
+}
+
+.progress-bar{
+
+width:100%;
+
+height:20px;
+
+background:#e6e6e6;
+
+border-radius:30px;
+
+overflow:hidden;
+
+margin:20px 0;
+
+}
+
+.progress-fill{
+
+height:100%;
+
+width:0%;
+
+background:#28a745;
+
+transition:.6s;
+
+}
+
+.submission-progress p{
+
+font-size:17px;
+
+font-weight:bold;
+
+}
+
+/* ==========================================
 INTERACTIVE NAMIBIA MAP
 ========================================== */
 
