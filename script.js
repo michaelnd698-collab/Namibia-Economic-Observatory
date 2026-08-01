@@ -64,7 +64,8 @@ labels:[
 'Mar',
 'Apr',
 'May',
-'Jun'
+'Jun',
+'Jul'   
 ],
 
 datasets:[{
@@ -77,7 +78,8 @@ data:[
 2.1,
 3.1,
 4.1,
-4.4
+4.4,
+4.7   
 ],
 
 borderColor:'#0077cc',
