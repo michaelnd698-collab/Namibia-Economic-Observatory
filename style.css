@@ -1358,6 +1358,28 @@ line-height:1.8;
 
 }
 
+.founder-info{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.founder-photo{
+
+    width:100%;
+
+}
+
+.founder-photo img{
+
+    width:200px;
+
+    height:200px;
+
+}
+    
 /* Navigation */
 
 .navbar{
