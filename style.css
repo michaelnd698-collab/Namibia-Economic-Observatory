@@ -440,44 +440,6 @@ line-height:1.9;
 
 }
 
-.founder h3{
-
-margin-top:20px;
-
-color:#0b3b75;
-
-font-size:32px;
-
-}
-
-.founder p{
-
-color:#555;
-
-margin-top:10px;
-
-font-size:18px;
-
-}
-
-.founder-badge{
-
-display:inline-block;
-
-margin-top:20px;
-
-padding:12px 25px;
-
-background:#edf5ff;
-
-border-radius:30px;
-
-font-weight:bold;
-
-color:#0b3b75;
-
-}
-
 .info-grid{
 
 display:grid;
