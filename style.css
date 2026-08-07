@@ -236,6 +236,18 @@ pointer-events:none;
 
 }
 
+.hero-button{
+
+margin:35px 0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
 /* HERO CONTENT */
 
 .hero-content h1{
