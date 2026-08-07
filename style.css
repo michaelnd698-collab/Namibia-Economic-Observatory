@@ -48,11 +48,15 @@ body{
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
 
-    padding:22px 60px;
+    justify-content:space-between;
+
+    padding:20px 50px;
+
+    position:relative;
+
+    z-index:10;
 
 }
 
@@ -64,19 +68,17 @@ body{
 
     gap:18px;
 
-    flex:1;
+    margin-right:auto;
 
-    justify-content:center;
-
-    margin-left:-120px;
+    margin-left:120px;
 
 }
 
 .brand img{
 
-    width:80px;
+    width:78px;
 
-    height:80px;
+    height:78px;
 
     border-radius:50%;
 
@@ -86,9 +88,11 @@ body{
 
     color:white;
 
-    font-size:32px;
+    font-size:30px;
 
     font-weight:700;
+
+    white-space:nowrap;
 
 }
 
