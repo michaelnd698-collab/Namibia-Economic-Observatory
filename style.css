@@ -40,25 +40,69 @@ body{
     backdrop-filter:blur(1px);
 }
 
-/* ===========================
+/* ==========================================
    HERO NAVIGATION
-=========================== */
+========================================== */
 
 .navbar{
 
-    display:flex;
+    position:relative;
+    z-index:100;
 
+    display:flex;
+    justify-content:space-between;
     align-items:center;
 
-    justify-content:space-between;
+    padding:18px 6%;
 
-    padding:20px 50px;
+    background:rgba(255,255,255,0.08);
 
-    position:relative;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
-    z-index:10;
+    border-bottom:1px solid rgba(255,255,255,0.15);
 
 }
+
+/* ----------------------------
+   LEFT BUTTON
+----------------------------- */
+
+.research-nav-btn{
+
+    display:inline-block;
+
+    padding:15px 34px;
+
+    background:#1b82e4;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    font-size:22px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+    z-index:101;
+
+}
+
+.research-nav-btn:hover{
+
+    background:#156cc0;
+
+    transform:translateY(-3px);
+
+}
+
+/* ----------------------------
+   BRAND
+----------------------------- */
 
 .brand{
 
@@ -68,11 +112,17 @@ body{
 
     gap:18px;
 
-    margin-right:auto;
+    flex:1;
 
-    margin-left:120px;
+    justify-content:center;
+
+    margin-left:80px;
 
 }
+
+/* ----------------------------
+   LOGO
+----------------------------- */
 
 .brand img{
 
@@ -80,62 +130,67 @@ body{
 
     height:78px;
 
+    object-fit:cover;
+
     border-radius:50%;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
 
 }
 
+.brand img:hover{
+
+    transform:scale(1.10);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+/* ----------------------------
+   LOGO TEXT
+----------------------------- */
+
 .logo-text{
+
+    font-size:32px;
+
+    font-weight:700;
 
     color:white;
 
-    font-size:30px;
-
-    font-weight:700;
+    letter-spacing:.5px;
 
     white-space:nowrap;
 
 }
 
-.research-nav-btn,
+/* ----------------------------
+   ABOUT BUTTON
+----------------------------- */
+
 .about-nav-btn{
 
-    display:inline-block;
-
-    padding:16px 34px;
-
-    border-radius:40px;
+    color:white;
 
     text-decoration:none;
 
+    font-size:22px;
+
     font-weight:600;
+
+    padding:12px 24px;
+
+    border:2px solid rgba(255,255,255,.8);
+
+    border-radius:35px;
 
     transition:.3s;
 
-}
-
-.research-nav-btn{
-
-    background:#1e88e5;
-
-    color:white;
-
-}
-
-.about-nav-btn{
-
-    background:transparent;
-
-    color:white;
-
-    border:2px solid white;
-
-}
-
-.research-nav-btn:hover{
-
-    background:#1565c0;
-
-    transform:translateY(-2px);
+    z-index:101;
 
 }
 
@@ -144,6 +199,30 @@ body{
     background:white;
 
     color:#0d355d;
+
+}
+
+/* ----------------------------
+   HERO CONTENT
+----------------------------- */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding-top:70px;
 
 }
 
