@@ -50,102 +50,116 @@ block: "start"
    CHART.JS
 ========================================== */
 
-
 /* ==========================================
    INFLATION CHART
 ========================================== */
 
-new Chart(
-    document.getElementById("inflationChart"),
-    {
-        type: "line",
+function createInflationChart(){
 
-        data: {
+    const canvas =
+        document.getElementById("inflationChart");
 
-            labels: [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul"
-            ],
+    if(!canvas) return;
 
-            datasets: [
+    /* Prevent duplicate chart */
 
-                {
-                    label: "Inflation Rate (%)",
+    if(Chart.getChart(canvas)){
+        Chart.getChart(canvas).destroy();
+    }
 
-                    data: [
-                        2.9,
-                        2.4,
-                        2.1,
-                        3.1,
-                        4.1,
-                        4.4,
-                        4.3
-                    ],
+    new Chart(
+        canvas,
+        {
+            type: "line",
 
-                    borderColor: "#0077cc",
+            data: {
 
-                    backgroundColor:
-                        "rgba(0,119,204,0.2)",
+                labels: [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul"
+                ],
 
-                    borderWidth: 3,
+                datasets: [
 
-                    fill: true,
+                    {
+                        label: "Inflation Rate (%)",
 
-                    tension: 0.4,
+                        data: [
+                            2.9,
+                            2.4,
+                            2.1,
+                            3.1,
+                            4.1,
+                            4.4,
+                            4.3
+                        ],
 
-                    pointRadius: 4,
+                        borderColor: "#0077cc",
 
-                    pointHoverRadius: 7
-                }
+                        backgroundColor:
+                            "rgba(0,119,204,0.2)",
 
-            ]
+                        borderWidth: 3,
 
-        },
+                        fill: true,
 
-        options: {
+                        tension: 0.4,
 
-            responsive: true,
+                        pointRadius: 4,
 
-            maintainAspectRatio: false,
+                        pointHoverRadius: 7
+                    }
 
-            plugins: {
-
-                legend: {
-
-                    display: true
-
-                }
+                ]
 
             },
 
-            scales: {
+            options: {
 
-                y: {
+                responsive: true,
 
-                    beginAtZero: false,
+                maintainAspectRatio: false,
 
-                    title: {
+                plugins: {
 
-                        display: true,
+                    legend: {
 
-                        text: "Inflation Rate (%)"
+                        display: true
 
                     }
 
                 },
 
-                x: {
+                scales: {
 
-                    title: {
+                    y: {
 
-                        display: true,
+                        beginAtZero: false,
 
-                        text: "Month"
+                        title: {
+
+                            display: true,
+
+                            text: "Inflation Rate (%)"
+
+                        }
+
+                    },
+
+                    x: {
+
+                        title: {
+
+                            display: true,
+
+                            text: "Month"
+
+                        }
 
                     }
 
@@ -154,106 +168,120 @@ new Chart(
             }
 
         }
-
-    }
-);
+    );
+}
 
 
 /* ==========================================
    USD / NAD EXCHANGE RATE CHART
 ========================================== */
 
-new Chart(
-    document.getElementById("tradeChart"),
-    {
-        type: "line",
+function createTradeChart(){
 
-        data: {
+    const canvas =
+        document.getElementById("tradeChart");
 
-            labels: [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul"
-            ],
+    if(!canvas) return;
 
-            datasets: [
+    /* Prevent duplicate chart */
 
-                {
-                    label: "USD/NAD",
+    if(Chart.getChart(canvas)){
+        Chart.getChart(canvas).destroy();
+    }
 
-                    data: [
-                        16.00,
-                        15.69,
-                        16.41,
-                        16.57,
-                        16.47,
-                        16.36,
-                        16.83
-                    ],
+    new Chart(
+        canvas,
+        {
+            type: "line",
 
-                    borderColor: "#009966",
+            data: {
 
-                    backgroundColor:
-                        "rgba(0,153,102,0.2)",
+                labels: [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul"
+                ],
 
-                    borderWidth: 3,
+                datasets: [
 
-                    fill: true,
+                    {
+                        label: "USD/NAD",
 
-                    tension: 0.4,
+                        data: [
+                            16.00,
+                            15.69,
+                            16.41,
+                            16.57,
+                            16.47,
+                            16.36,
+                            16.83
+                        ],
 
-                    pointRadius: 4,
+                        borderColor: "#009966",
 
-                    pointHoverRadius: 7
-                }
+                        backgroundColor:
+                            "rgba(0,153,102,0.2)",
 
-            ]
+                        borderWidth: 3,
 
-        },
+                        fill: true,
 
-        options: {
+                        tension: 0.4,
 
-            responsive: true,
+                        pointRadius: 4,
 
-            maintainAspectRatio: false,
+                        pointHoverRadius: 7
+                    }
 
-            plugins: {
-
-                legend: {
-
-                    display: true
-
-                }
+                ]
 
             },
 
-            scales: {
+            options: {
 
-                y: {
+                responsive: true,
 
-                    beginAtZero: false,
+                maintainAspectRatio: false,
 
-                    title: {
+                plugins: {
 
-                        display: true,
+                    legend: {
 
-                        text: "NAD per USD"
+                        display: true
 
                     }
 
                 },
 
-                x: {
+                scales: {
 
-                    title: {
+                    y: {
 
-                        display: true,
+                        beginAtZero: false,
 
-                        text: "Month"
+                        title: {
+
+                            display: true,
+
+                            text: "NAD per USD"
+
+                        }
+
+                    },
+
+                    x: {
+
+                        title: {
+
+                            display: true,
+
+                            text: "Month"
+
+                        }
 
                     }
 
@@ -262,6 +290,21 @@ new Chart(
             }
 
         }
+    );
+}
+
+
+/* ==========================================
+   INITIALISE CHARTS
+========================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        createInflationChart();
+
+        createTradeChart();
 
     }
 );
