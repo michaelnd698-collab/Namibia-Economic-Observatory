@@ -50,131 +50,221 @@ block: "start"
    CHART.JS
 ========================================== */
 
-const ctx =
-document.getElementById('inflationChart');
 
-new Chart(ctx, {
+/* ==========================================
+   INFLATION CHART
+========================================== */
 
-type:'line',
+new Chart(
+    document.getElementById("inflationChart"),
+    {
+        type: "line",
 
-data:{
-labels:[
-'Jan',
-'Feb',
-'Mar',
-'Apr',
-'May',
-'Jun',
-'Jul'   
-],
+        data: {
 
-datasets:[{
+            labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul"
+            ],
 
-label:'Inflation Rate (%)',
+            datasets: [
 
-data:[
-2.9,
-2.4,
-2.1,
-3.1,
-4.1,
-4.4,
-4.3   
-],
+                {
+                    label: "Inflation Rate (%)",
 
-borderColor:'#0077cc',
+                    data: [
+                        2.9,
+                        2.4,
+                        2.1,
+                        3.1,
+                        4.1,
+                        4.4,
+                        4.3
+                    ],
 
-backgroundColor:
-'rgba(0,119,204,0.2)',
+                    borderColor: "#0077cc",
 
-fill:true,
+                    backgroundColor:
+                        "rgba(0,119,204,0.2)",
 
-tension:0.4
+                    borderWidth: 3,
 
-}]
-},
+                    fill: true,
 
-options:{
+                    tension: 0.4,
 
-responsive:true,
+                    pointRadius: 4,
 
-maintainAspectRatio:false,
+                    pointHoverRadius: 7
+                }
 
-plugins:{
-legend:{
-display:true
-}
-},
+            ]
 
-scales:{
-y:{
-beginAtZero:false
-}
-}
+        },
 
-}
+        options: {
 
-});
-    
-const tradeCtx =
-document.getElementById('tradeChart');
+            responsive: true,
 
-if(tradeCtx){
+            maintainAspectRatio: false,
 
-new Chart(tradeCtx,{
+            plugins: {
 
-type:'line',
+                legend: {
 
-data:{
+                    display: true
 
-labels:[
-'Jan',
-'Feb',
-'Mar',
-'Apr',
-'May',
-'Jun',
-'Jul'   
-],
+                }
 
-datasets:[{
+            },
 
-label:'USD/NAD',
+            scales: {
 
-data:[
-16.00,
-15.69,
-16.41,
-16.57,
-16.47,
-16.36,
-16.83   
-],
+                y: {
 
-borderColor:'#009966',
+                    beginAtZero: false,
 
-backgroundColor:
-'rgba(0,153,102,0.2)',
+                    title: {
 
-fill:true,
+                        display: true,
 
-tension:0.4
+                        text: "Inflation Rate (%)"
 
-}]
+                    }
 
-},
+                },
 
-options:{
+                x: {
 
-responsive:true,
+                    title: {
 
-maintainAspectRatio:false,
+                        display: true,
 
-}
+                        text: "Month"
 
-});
+                    }
 
-}
+                }
+
+            }
+
+        }
+
+    }
+);
+
+
+/* ==========================================
+   USD / NAD EXCHANGE RATE CHART
+========================================== */
+
+new Chart(
+    document.getElementById("tradeChart"),
+    {
+        type: "line",
+
+        data: {
+
+            labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul"
+            ],
+
+            datasets: [
+
+                {
+                    label: "USD/NAD",
+
+                    data: [
+                        16.00,
+                        15.69,
+                        16.41,
+                        16.57,
+                        16.47,
+                        16.36,
+                        16.83
+                    ],
+
+                    borderColor: "#009966",
+
+                    backgroundColor:
+                        "rgba(0,153,102,0.2)",
+
+                    borderWidth: 3,
+
+                    fill: true,
+
+                    tension: 0.4,
+
+                    pointRadius: 4,
+
+                    pointHoverRadius: 7
+                }
+
+            ]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            plugins: {
+
+                legend: {
+
+                    display: true
+
+                }
+
+            },
+
+            scales: {
+
+                y: {
+
+                    beginAtZero: false,
+
+                    title: {
+
+                        display: true,
+
+                        text: "NAD per USD"
+
+                    }
+
+                },
+
+                x: {
+
+                    title: {
+
+                        display: true,
+
+                        text: "Month"
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+);
 
 /* ==========================================
    DASHBOARD NAVIGATION
