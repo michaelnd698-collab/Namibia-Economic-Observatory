@@ -1974,36 +1974,37 @@ box-shadow:0 8px 25px rgba(0,0,0,0.08);
 
 .region{
 
-fill:#b0c4de;
+    fill:#b0c4de;
 
-stroke:#ffffff;
+    stroke:#ffffff;
 
-stroke-width:2;
+    stroke-width:2;
 
-cursor:pointer;
+    cursor:pointer;
 
-transition:0.3s;
+    pointer-events:all;
 
+    transition:
+        fill 0.3s ease,
+        transform 0.2s ease;
 }
 
 .region:hover{
 
-fill:#0077cc;
-
-transform:scale(1.02);
+    fill:#0077cc;
 
 }
 
 .region.active{
 
-fill:#003366;
+    fill:#003366;
 
-stroke:#ffcc00;
+    stroke:#ffcc00;
 
-stroke-width:4;
+    stroke-width:4;
 
-filter:drop-shadow(0 0 8px rgba(0,0,0,.35));
-
+    filter:
+        drop-shadow(0 0 8px rgba(0,0,0,.35));
 }
 
 .region-info{
