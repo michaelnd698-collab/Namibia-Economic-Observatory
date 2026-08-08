@@ -16,6 +16,10 @@ html{
     scroll-behavior:smooth;
 }
 
+#dashboard-section{
+    scroll-margin-top:30px;
+}
+
 /* HERO SECTION */
 
 .hero{
