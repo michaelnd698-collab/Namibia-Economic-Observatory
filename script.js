@@ -399,29 +399,31 @@ document.getElementById(
 
 function showTradeDashboard(){
 
-document.getElementById(
-"inflationDashboard"
-).style.display="none";
+    document.getElementById(
+        "inflationDashboard"
+    ).style.display="none";
 
-document.getElementById(
-"costDashboard"
-).style.display="none";
+    document.getElementById(
+        "costDashboard"
+    ).style.display="none";
 
-document.getElementById(
-"housingDashboard"
-).style.display="none";
+    document.getElementById(
+        "housingDashboard"
+    ).style.display="none";
 
-document.getElementById(
-"employmentDashboard"
-).style.display="none";
+    document.getElementById(
+        "employmentDashboard"
+    ).style.display="none";
 
-document.getElementById(
-"regionalDashboard"
-).style.display="none";
+    document.getElementById(
+        "regionalDashboard"
+    ).style.display="none";
 
-document.getElementById(
-"tradeDashboard"
-).style.display="block";
+    document.getElementById(
+        "tradeDashboard"
+    ).style.display="block";
+
+    createTradeChart();
 
 }
 
@@ -455,30 +457,32 @@ document.getElementById(
     
 function showInflationDashboard(){
 
-document.getElementById(
-"inflationDashboard"
-).style.display="block";
+    document.getElementById(
+        "inflationDashboard"
+    ).style.display="block";
 
-document.getElementById(
-"costDashboard"
-).style.display="none";
+    document.getElementById(
+        "costDashboard"
+    ).style.display="none";
 
-document.getElementById(
-"housingDashboard"
-).style.display="none";
+    document.getElementById(
+        "housingDashboard"
+    ).style.display="none";
 
-document.getElementById(
-"employmentDashboard"
-).style.display="none";
+    document.getElementById(
+        "employmentDashboard"
+    ).style.display="none";
 
-document.getElementById(
-"tradeDashboard"
-).style.display="none";
-    
-document.getElementById(
-"regionalDashboard"
-).style.display="none";
-    
+    document.getElementById(
+        "tradeDashboard"
+    ).style.display="none";
+
+    document.getElementById(
+        "regionalDashboard"
+    ).style.display="none";
+
+    createInflationChart();
+
 }
 
 /* ==========================================
