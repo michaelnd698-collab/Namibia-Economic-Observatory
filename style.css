@@ -12,6 +12,10 @@ body{
     line-height:1.7;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 /* HERO SECTION */
 
 .hero{
