@@ -449,7 +449,7 @@ function showInflationDashboard(){
    INTERACTIVE NAMIBIA MAP
 ========================================== */
 
-const regionData = {
+const regionsData = {
 
     khomas: {
         name: "Khomas",
@@ -567,7 +567,7 @@ const regionData = {
 
 function selectRegion(regionId){
 
-    const data = regionData[regionId];
+    const data = regionsData[regionId];
 
     if(!data) return;
 
