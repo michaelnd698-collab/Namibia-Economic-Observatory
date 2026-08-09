@@ -54,245 +54,161 @@ block: "start"
    INFLATION CHART
 ========================================== */
 
+let inflationChart = null;
+
 function createInflationChart(){
 
-    const canvas =
-        document.getElementById("inflationChart");
+    const canvas = document.getElementById("inflationChart");
 
     if(!canvas) return;
 
-    /* Prevent duplicate chart */
+    /* Prevent duplicate charts */
 
-    if(Chart.getChart(canvas)){
-        Chart.getChart(canvas).destroy();
+    if(inflationChart){
+        inflationChart.destroy();
     }
 
-    new Chart(
-        canvas,
-        {
-            type: "line",
+    inflationChart = new Chart(canvas, {
 
-            data: {
+        type: "line",
 
-                labels: [
-                    "Jan",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "May",
-                    "Jun",
-                    "Jul"
+        data: {
+
+            labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul"
+            ],
+
+            datasets: [{
+
+                label: "Inflation Rate (%)",
+
+                data: [
+                    2.9,
+                    2.4,
+                    2.1,
+                    3.1,
+                    4.1,
+                    4.4,
+                    4.3
                 ],
 
-                datasets: [
+                borderColor: "#0077cc",
 
-                    {
-                        label: "Inflation Rate (%)",
+                backgroundColor:
+                    "rgba(0,119,204,0.2)",
 
-                        data: [
-                            2.9,
-                            2.4,
-                            2.1,
-                            3.1,
-                            4.1,
-                            4.4,
-                            4.3
-                        ],
+                fill: true,
 
-                        borderColor: "#0077cc",
+                tension: 0.4
 
-                        backgroundColor:
-                            "rgba(0,119,204,0.2)",
+            }]
 
-                        borderWidth: 3,
+        },
 
-                        fill: true,
+        options: {
 
-                        tension: 0.4,
+            responsive: true,
 
-                        pointRadius: 4,
+            maintainAspectRatio: false,
 
-                        pointHoverRadius: 7
-                    }
+            plugins: {
 
-                ]
+                legend: {
+                    display: true
+                }
 
             },
 
-            options: {
+            scales: {
 
-                responsive: true,
-
-                maintainAspectRatio: false,
-
-                plugins: {
-
-                    legend: {
-
-                        display: true
-
-                    }
-
-                },
-
-                scales: {
-
-                    y: {
-
-                        beginAtZero: false,
-
-                        title: {
-
-                            display: true,
-
-                            text: "Inflation Rate (%)"
-
-                        }
-
-                    },
-
-                    x: {
-
-                        title: {
-
-                            display: true,
-
-                            text: "Month"
-
-                        }
-
-                    }
-
+                y: {
+                    beginAtZero: false
                 }
 
             }
 
         }
-    );
+
+    });
+
 }
 
-
 /* ==========================================
-   USD / NAD EXCHANGE RATE CHART
+   TRADE / USD NAD CHART
 ========================================== */
+
+let tradeChart = null;
 
 function createTradeChart(){
 
-    const canvas =
-        document.getElementById("tradeChart");
+    const canvas = document.getElementById("tradeChart");
 
     if(!canvas) return;
 
-    /* Prevent duplicate chart */
-
-    if(Chart.getChart(canvas)){
-        Chart.getChart(canvas).destroy();
+    if(tradeChart){
+        tradeChart.destroy();
     }
 
-    new Chart(
-        canvas,
-        {
-            type: "line",
+    tradeChart = new Chart(canvas, {
 
-            data: {
+        type: "line",
 
-                labels: [
-                    "Jan",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "May",
-                    "Jun",
-                    "Jul"
+        data: {
+
+            labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul"
+            ],
+
+            datasets: [{
+
+                label: "USD/NAD",
+
+                data: [
+                    16.00,
+                    15.69,
+                    16.41,
+                    16.57,
+                    16.47,
+                    16.36,
+                    16.83
                 ],
 
-                datasets: [
+                borderColor: "#009966",
 
-                    {
-                        label: "USD/NAD",
+                backgroundColor:
+                    "rgba(0,153,102,0.2)",
 
-                        data: [
-                            16.00,
-                            15.69,
-                            16.41,
-                            16.57,
-                            16.47,
-                            16.36,
-                            16.83
-                        ],
+                fill: true,
 
-                        borderColor: "#009966",
+                tension: 0.4
 
-                        backgroundColor:
-                            "rgba(0,153,102,0.2)",
+            }]
 
-                        borderWidth: 3,
+        },
 
-                        fill: true,
+        options: {
 
-                        tension: 0.4,
+            responsive: true,
 
-                        pointRadius: 4,
-
-                        pointHoverRadius: 7
-                    }
-
-                ]
-
-            },
-
-            options: {
-
-                responsive: true,
-
-                maintainAspectRatio: false,
-
-                plugins: {
-
-                    legend: {
-
-                        display: true
-
-                    }
-
-                },
-
-                scales: {
-
-                    y: {
-
-                        beginAtZero: false,
-
-                        title: {
-
-                            display: true,
-
-                            text: "NAD per USD"
-
-                        }
-
-                    },
-
-                    x: {
-
-                        title: {
-
-                            display: true,
-
-                            text: "Month"
-
-                        }
-
-                    }
-
-                }
-
-            }
+            maintainAspectRatio: false
 
         }
-    );
-}
 
+    });
+
+}
 
 /* ==========================================
    INITIALISE CHARTS
@@ -308,6 +224,50 @@ document.addEventListener(
 
     }
 );
+
+function showInflationDashboard(){
+
+    document.getElementById("inflationDashboard").style.display = "block";
+
+    document.getElementById("costDashboard").style.display = "none";
+
+    document.getElementById("housingDashboard").style.display = "none";
+
+    document.getElementById("employmentDashboard").style.display = "none";
+
+    document.getElementById("tradeDashboard").style.display = "none";
+
+    document.getElementById("regionalDashboard").style.display = "none";
+
+    setTimeout(function(){
+
+        createInflationChart();
+
+    }, 100);
+
+}
+
+function showTradeDashboard(){
+
+    document.getElementById("inflationDashboard").style.display = "none";
+
+    document.getElementById("costDashboard").style.display = "none";
+
+    document.getElementById("housingDashboard").style.display = "none";
+
+    document.getElementById("employmentDashboard").style.display = "none";
+
+    document.getElementById("tradeDashboard").style.display = "block";
+
+    document.getElementById("regionalDashboard").style.display = "none";
+
+    setTimeout(function(){
+
+        createTradeChart();
+
+    }, 100);
+
+}
 
 /* ==========================================
    DASHBOARD NAVIGATION
@@ -640,5 +600,11 @@ document.getElementById('regionDevelopment')
 .textContent = data.development;
 
 });
+
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    showInflationDashboard();
 
 });
