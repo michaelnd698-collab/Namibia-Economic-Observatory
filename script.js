@@ -446,165 +446,177 @@ function showInflationDashboard(){
 }
 
 /* ==========================================
-INTERACTIVE NAMIBIA MAP
+   INTERACTIVE NAMIBIA MAP
 ========================================== */
 
-const regionsData = {
+const regionData = {
 
-khomas:{
-name:"Khomas",
-capital:"Windhoek",
-population:"494,605",
-employment:"High",
-development:"High"
-},
+    khomas: {
+        name: "Khomas",
+        capital: "Windhoek",
+        population: "494,605",
+        employment: "High",
+        development: "High"
+    },
 
-erongo:{
-name:"Erongo",
-capital:"Swakopmund",
-population:"204,000",
-employment:"Medium",
-development:"High"
-},
+    erongo: {
+        name: "Erongo",
+        capital: "Swakopmund",
+        population: "204,000",
+        employment: "Medium",
+        development: "High"
+    },
 
-oshana:{
-name:"Oshana",
-capital:"Oshakati",
-population:"242,000",
-employment:"Medium",
-development:"Medium"
-},
+    oshana: {
+        name: "Oshana",
+        capital: "Oshakati",
+        population: "242,000",
+        employment: "Medium",
+        development: "Medium"
+    },
 
-omusati:{
-name:"Omusati",
-capital:"Outapi",
-population:"248,000",
-employment:"Medium",
-development:"Medium"
-},
+    omusati: {
+        name: "Omusati",
+        capital: "Outapi",
+        population: "248,000",
+        employment: "Medium",
+        development: "Medium"
+    },
 
-ohangwena:{
-name:"Ohangwena",
-capital:"Eenhana",
-population:"340,000",
-employment:"Medium",
-development:"Medium"
-},
+    ohangwena: {
+        name: "Ohangwena",
+        capital: "Eenhana",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
 
-oshikoto:{
-name:"Oshikoto",
-capital:"Omuthiya",
-population:"220,000",
-employment:"Medium",
-development:"Medium"
-},
+    oshikoto: {
+        name: "Oshikoto",
+        capital: "Tsumeb",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
 
-kunene:{
-name:"Kunene",
-capital:"Opuwo",
-population:"120,000",
-employment:"Low",
-development:"Medium"
-},
+    kunene: {
+        name: "Kunene",
+        capital: "Opuwo",
+        population: "Unknown",
+        employment: "Low",
+        development: "Medium"
+    },
 
-otjozondjupa:{
-name:"Otjozondjupa",
-capital:"Otjiwarongo",
-population:"180,000",
-employment:"Medium",
-development:"Medium"
-},
+    otjozondjupa: {
+        name: "Otjozondjupa",
+        capital: "Otjiwarongo",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
 
-omaheke:{
-name:"Omaheke",
-capital:"Gobabis",
-population:"80,000",
-employment:"Low",
-development:"Medium"
-},
+    omaheke: {
+        name: "Omaheke",
+        capital: "Gobabis",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
 
-hardap:{
-name:"Hardap",
-capital:"Mariental",
-population:"90,000",
-employment:"Low",
-development:"Medium"
-},
+    hardap: {
+        name: "Hardap",
+        capital: "Mariental",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
 
-karas:{
-name:"//Kharas",
-capital:"Keetmanshoop",
-population:"80,000",
-employment:"Low",
-development:"Medium"
-},
+    karas: {
+        name: "//Kharas",
+        capital: "Keetmanshoop",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
 
-kavangoEast:{
-name:"Kavango East",
-capital:"Rundu",
-population:"118,000",
-employment:"Low",
-development:"Medium"
-},
+    kavangoEast: {
+        name: "Kavango East",
+        capital: "Rundu",
+        population: "118,000",
+        employment: "Low",
+        development: "Medium"
+    },
 
-kavangoWest:{
-name:"Kavango West",
-capital:"Nkurenkuru",
-population:"100,000",
-employment:"Low",
-development:"Low"
-},
+    kavangoWest: {
+        name: "Kavango West",
+        capital: "Nkurenkuru",
+        population: "Unknown",
+        employment: "Low",
+        development: "Medium"
+    },
 
-zambezi:{
-name:"Zambezi",
-capital:"Katima Mulilo",
-population:"100,000",
-employment:"Low",
-development:"Medium"
-}
+    zambezi: {
+        name: "Zambezi",
+        capital: "Katima Mulilo",
+        population: "100,000",
+        employment: "Low",
+        development: "Medium"
+    }
 
 };
 
-document.querySelectorAll('.region').forEach(region=>{
+function selectRegion(regionId){
 
-region.addEventListener('click',function(){
+    const data = regionData[regionId];
 
-// Remove active class from all regions
+    if(!data) return;
 
-document.querySelectorAll('.region')
-.forEach(r=>r.classList.remove('active'));
+    document.getElementById("regionName").textContent =
+        data.name;
 
-// Add active class to clicked region
+    document.getElementById("regionCapital").textContent =
+        data.capital;
 
-this.classList.add('active');
+    document.getElementById("regionPopulation").textContent =
+        data.population;
 
-// Get region data
+    document.getElementById("regionEmployment").textContent =
+        data.employment;
 
-const data = regionsData[this.id];
+    document.getElementById("regionDevelopment").textContent =
+        data.development;
 
-// Update info panel
+    /* Remove active state from all regions */
 
-document.getElementById('regionName')
-.textContent = data.name;
+    document.querySelectorAll(".region").forEach(function(region){
 
-document.getElementById('regionCapital')
-.textContent = data.capital;
+        region.classList.remove("active");
 
-document.getElementById('regionPopulation')
-.textContent = data.population;
+    });
 
-document.getElementById('regionEmployment')
-.textContent = data.employment;
+    /* Highlight selected region */
 
-document.getElementById('regionDevelopment')
-.textContent = data.development;
+    const selected =
+        document.getElementById(regionId);
 
-});
+    if(selected){
 
-});
+        selected.classList.add("active");
+
+    }
+
+}
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    showInflationDashboard();
+    document.querySelectorAll(".region").forEach(function(region){
+
+        region.addEventListener("click", function(){
+
+            selectRegion(this.id);
+
+        });
+
+    });
 
 });
