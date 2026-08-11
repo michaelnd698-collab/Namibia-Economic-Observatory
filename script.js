@@ -103,14 +103,15 @@ function createInflationChart() {
 
         data: {
 
-            labels: [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul"
+         labels: [
+               "Jan",
+               "Feb",
+               "Mar",
+               "Apr",
+               "May",
+               "Jun",
+               "Jul",
+               "Aug"
             ],
 
             datasets: [{
@@ -118,13 +119,14 @@ function createInflationChart() {
                 label: "Inflation Rate (%)",
 
                 data: [
-                    2.9,
-                    2.4,
-                    2.1,
-                    3.1,
-                    4.1,
-                    4.4,
-                    4.3
+                   2.9,
+                   2.4,
+                   2.1,
+                   3.1,
+                   4.1,
+                   4.4,
+                   4.3,
+                   4.2
                 ],
 
                 borderColor: "#0077cc",
@@ -215,28 +217,30 @@ function createTradeChart() {
 
         data: {
 
-            labels: [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul"
+          labels: [
+               "Jan",
+               "Feb",
+               "Mar",
+               "Apr",
+               "May",
+               "Jun",
+               "Jul",
+               "Aug"
             ],
 
             datasets: [{
 
-                label: "USD/NAD",
+               label: "USD/NAD",
 
-                data: [
-                    16.00,
-                    15.69,
-                    16.41,
-                    16.57,
-                    16.47,
-                    16.36,
-                    16.83
+               data: [
+                   16.00,
+                   15.69,
+                   16.41,
+                   16.57,
+                   16.47,
+                   16.36,
+                   16.83,
+                   16.22
                 ],
 
                 borderColor: "#009966",
