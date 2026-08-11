@@ -119,14 +119,14 @@ function createInflationChart() {
                 label: "Inflation Rate (%)",
 
                 data: [
-                   2.9,
-                   2.4,
-                   2.1,
-                   3.1,
-                   4.1,
-                   4.4,
-                   4.3,
-                   4.2
+                    2.9,
+                    2.4,
+                    2.1,
+                    3.1,
+                    4.1,
+                    4.4,
+                    4.3,
+                    4.2
                 ],
 
                 borderColor: "#0077cc",
