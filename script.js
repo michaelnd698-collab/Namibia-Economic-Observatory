@@ -702,22 +702,6 @@ function selectRegion(regionId) {
    MANAGEMENT NAVIGATION
 ========================================== */
 
-function showBoardMembers(){
-
-    document.getElementById(
-        "boardMembers"
-    ).style.display = "block";
-
-    document.getElementById(
-        "executiveMembers"
-    ).style.display = "none";
-
-    document.getElementById(
-        "managementTitle"
-    ).textContent = "Board Members";
-
-}
-
 function showExecutiveMembers(){
 
     document.getElementById(
@@ -726,6 +710,19 @@ function showExecutiveMembers(){
 
     document.getElementById(
         "executiveMembers"
+    ).style.display = "block";
+
+}
+
+
+function showBoardMembers(){
+
+    document.getElementById(
+        "executiveMembers"
+    ).style.display = "none";
+
+    document.getElementById(
+        "boardMembers"
     ).style.display = "block";
 
 }
