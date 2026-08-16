@@ -184,94 +184,81 @@ fieldwork and data initiatives.
 
 </section>
 
-<!-- ==========================================
-     MANAGEMENT SECTION
-========================================== -->
+<!-- MANAGEMENT SECTION -->
 
 <section id="management-section">
 
     <!-- BOARD MEMBERS -->
 
-    <div id="boardMembers" class="management-card">
+    <div id="boardManagement">
 
-        <div class="management-header">
+        <div class="card section-grey">
 
-            <h2>Board Members</h2>
+            <div class="dashboard-header">
 
-            <button
-                class="management-next"
-                onclick="showExecutiveMembers()">
-                Next ▶
-            </button>
+                <button class="nav-btn"
+                onclick="previousManagement()">
+                    ◀ Previous
+                </button>
 
-        </div>
+                <h2>
+                    Board Members
+                </h2>
 
-
-        <div class="management-grid">
-
-            <div class="management-member">
-
-                <div class="member-photo">
-                    Photo
-                </div>
-
-                <div class="member-info">
-
-                    <h3>Michael Henok</h3>
-
-                    <p>Chairperson</p>
-
-                </div>
+                <button class="nav-btn"
+                onclick="showExecutiveManagement()">
+                    Next ▶
+                </button>
 
             </div>
 
+            <div class="management-grid">
 
-            <div class="management-member">
+                <div class="management-card">
+                    <div class="member-photo">
+                        Photo
+                    </div>
 
-                <div class="member-photo">
-                    Photo
+                    <div class="member-info">
+                        <h3>Michael Henok</h3>
+                        <p>Chairperson</p>
+                    </div>
                 </div>
 
-                <div class="member-info">
 
-                    <h3>Place Holder</h3>
+                <div class="management-card">
+                    <div class="member-photo">
+                        Photo
+                    </div>
 
-                    <p>Board Member</p>
-
+                    <div class="member-info">
+                        <h3>Place Holder</h3>
+                        <p>Board Member</p>
+                    </div>
                 </div>
 
-            </div>
 
+                <div class="management-card">
+                    <div class="member-photo">
+                        Photo
+                    </div>
 
-            <div class="management-member">
-
-                <div class="member-photo">
-                    Photo
+                    <div class="member-info">
+                        <h3>Place Holder</h3>
+                        <p>Board Member</p>
+                    </div>
                 </div>
 
-                <div class="member-info">
 
-                    <h3>Place Holder</h3>
+                <div class="management-card">
+                    <div class="member-photo">
+                        Photo
+                    </div>
 
-                    <p>Board Member</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="management-member">
-
-                <div class="member-photo">
-                    Photo
-                </div>
-
-                <div class="member-info">
-
-                    <h3>Place Holder</h3>
-
-                    <p>Board Member</p>
-
+                    <div class="member-info">
+                        <h3>Place Holder</h3>
+                        <p>Board Member</p>
+                    </div>
                 </div>
 
             </div>
@@ -281,92 +268,77 @@ fieldwork and data initiatives.
     </div>
 
 
+    <!-- EXECUTIVE MANAGEMENT -->
 
-    <!-- EXECUTIVE MEMBERS -->
+    <div id="executiveManagement" style="display:none;">
 
-    <div
-        id="executiveMembers"
-        class="management-card"
-        style="display:none;">
+        <div class="card section-grey">
 
-        <div class="management-header">
+            <div class="dashboard-header">
 
-            <button
-                class="management-previous"
-                onclick="showBoardMembers()">
-                ◀ Previous
-            </button>
+                <button class="nav-btn"
+                onclick="showBoardManagement()">
+                    ◀ Previous
+                </button>
 
-            <h2>Executive Members</h2>
+                <h2>
+                    Executive Management
+                </h2>
 
-        </div>
-
-
-        <div class="management-grid">
-
-            <div class="management-member">
-
-                <div class="member-photo">
-                    Photo
-                </div>
-
-                <div class="member-info">
-
-                    <h3>Place Holder</h3>
-
-                    <p>Executive Director</p>
-
-                </div>
+                <button class="nav-btn"
+                onclick="showExecutiveManagementNext()">
+                    Next ▶
+                </button>
 
             </div>
 
+            <div class="management-grid">
 
-            <div class="management-member">
+                <div class="management-card">
+                    <div class="member-photo">
+                        Photo
+                    </div>
 
-                <div class="member-photo">
-                    Photo
+                    <div class="member-info">
+                        <h3>Place Holder</h3>
+                        <p>Chief Executive Officer</p>
+                    </div>
                 </div>
 
-                <div class="member-info">
 
-                    <h3>Place Holder</h3>
+                <div class="management-card">
+                    <div class="member-photo">
+                        Photo
+                    </div>
 
-                    <p>Deputy Executive Director</p>
-
+                    <div class="member-info">
+                        <h3>Place Holder</h3>
+                        <p>Chief Economist</p>
+                    </div>
                 </div>
 
-            </div>
 
+                <div class="management-card">
+                    <div class="member-photo">
+                        Photo
+                    </div>
 
-            <div class="management-member">
-
-                <div class="member-photo">
-                    Photo
+                    <div class="member-info">
+                        <h3>Place Holder</h3>
+                        <p>Research Director</p>
+                    </div>
                 </div>
 
-                <div class="member-info">
 
-                    <h3>Place Holder</h3>
+                <div class="management-card">
+                    <div class="member-photo">
+                        Photo
+                    </div>
 
-                    <p>Finance Manager</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="management-member">
-
-                <div class="member-photo">
-                    Photo
-                </div>
-
-                <div class="member-info">
-
-                    <h3>Place Holder</h3>
-
-                    <p>Research Manager</p>
-
+                    <div class="member-info">
+                        <h3>Place Holder</h3>
+                        <p>Finance Director</p>
+                    </div>
                 </div>
 
             </div>
