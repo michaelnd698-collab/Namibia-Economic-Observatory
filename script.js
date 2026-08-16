@@ -698,35 +698,6 @@ function selectRegion(regionId) {
 }
 
 /* ==========================================
-   MANAGEMENT NAVIGATION
-========================================== */
-
-function showExecutiveMembers(){
-
-    document.getElementById(
-        "boardMembers"
-    ).style.display = "none";
-
-    document.getElementById(
-        "executiveMembers"
-    ).style.display = "block";
-
-}
-
-
-function showBoardMembers(){
-
-    document.getElementById(
-        "executiveMembers"
-    ).style.display = "none";
-
-    document.getElementById(
-        "boardMembers"
-    ).style.display = "block";
-
-}
-
-/* ==========================================
    INITIALISE EVERYTHING
 ========================================== */
 
@@ -764,3 +735,32 @@ document.addEventListener(
 
     }
 );
+
+/* ==========================================
+   MANAGEMENT NAVIGATION
+========================================== */
+
+function showExecutiveMembers(){
+
+    document.getElementById(
+        "boardMembers"
+    ).style.display = "none";
+
+    document.getElementById(
+        "executiveMembers"
+    ).style.display = "block";
+
+}
+
+
+function showBoardMembers(){
+
+    document.getElementById(
+        "executiveMembers"
+    ).style.display = "none";
+
+    document.getElementById(
+        "boardMembers"
+    ).style.display = "block";
+
+}
