@@ -740,27 +740,41 @@ document.addEventListener(
    MANAGEMENT NAVIGATION
 ========================================== */
 
-function showExecutiveMembers(){
+function showBoardManagement(){
 
     document.getElementById(
-        "boardMembers"
+        "boardManagement"
+    ).style.display = "block";
+
+    document.getElementById(
+        "executiveManagement"
+    ).style.display = "none";
+
+}
+
+
+function showExecutiveManagement(){
+
+    document.getElementById(
+        "boardManagement"
     ).style.display = "none";
 
     document.getElementById(
-        "executiveMembers"
+        "executiveManagement"
     ).style.display = "block";
 
 }
 
 
-function showBoardMembers(){
+function previousManagement(){
 
-    document.getElementById(
-        "executiveMembers"
-    ).style.display = "none";
+    /*
+       Board Members is the first
+       management category.
 
-    document.getElementById(
-        "boardMembers"
-    ).style.display = "block";
+       Keep this empty for now,
+       or later connect it to
+       the previous section.
+    */
 
 }
