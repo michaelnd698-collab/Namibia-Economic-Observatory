@@ -736,13 +736,9 @@ document.addEventListener(
     }
 );
 
-function showBoardManagement(){
-
-    document.getElementById("boardManagement").style.display = "block";
-
-    document.getElementById("executiveManagement").style.display = "none";
-
-}
+/* ==========================================
+   MANAGEMENT NAVIGATION
+========================================== */
 
 function showExecutiveManagement(){
 
@@ -752,7 +748,17 @@ function showExecutiveManagement(){
 
 }
 
-function previousManagement(){
+
+function showBoardManagement(){
+
+    document.getElementById("executiveManagement").style.display = "none";
+
+    document.getElementById("boardManagement").style.display = "block";
+
+}
+
+
+function showAboutManagement(){
 
     showBoardManagement();
 
