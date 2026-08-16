@@ -701,7 +701,9 @@ function selectRegion(regionId) {
    MANAGEMENT NAVIGATION
 ========================================== */
 
-function showExecutiveMembers(){
+function showExecutiveDashboard(){
+
+    alert("NEXT BUTTON WORKS");
 
     document.getElementById(
         "boardMembers"
@@ -712,7 +714,6 @@ function showExecutiveMembers(){
     ).style.display = "block";
 
 }
-
 
 function showBoardMembers(){
 
