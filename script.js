@@ -698,6 +698,38 @@ function selectRegion(regionId) {
 
 }
 
+/* ==========================================
+   MANAGEMENT NAVIGATION
+========================================== */
+
+function showBoardMembers(){
+
+    document.getElementById(
+        "boardMembers"
+    ).style.display = "block";
+
+    document.getElementById(
+        "executiveMembers"
+    ).style.display = "none";
+
+    document.getElementById(
+        "managementTitle"
+    ).textContent = "Board Members";
+
+}
+
+
+function showExecutiveMembers(){
+
+    document.getElementById(
+        "boardMembers"
+    ).style.display = "none";
+
+    document.getElementById(
+        "executiveMembers"
+    ).style.display = "block";
+
+}
 
 /* ==========================================
    INITIALISE EVERYTHING
