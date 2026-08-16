@@ -1187,140 +1187,219 @@ margin-bottom:35px;
 
 #management-section {
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin: 35px 0 60px;
 }
+
+
+/* MAIN MANAGEMENT CARD */
 
 .management-card {
-    width: 100%;
-    box-sizing: border-box;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 35px;
-}
-
-
-/* MANAGEMENT HEADER */
-
-.management-header {
-    display: grid;
-    grid-template-columns: 120px 1fr 120px;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 35px;
-}
-
-.management-header h2 {
-    text-align: center;
-    margin: 0;
-    font-size: 28px;
-}
-
-
-/* NAVIGATION BUTTON */
-
-.management-nav-btn {
-    border: none;
-    background: #0077cc;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.management-nav-btn:hover {
-    background: #005fa3;
-    transform: translateY(-2px);
-}
-
-
-/* MEMBER GRID */
-
-.management-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-    max-width: 900px;
-    margin: auto;
-}
-
-
-/* MEMBER CARD */
-
-.management-member {
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
-    transition: 0.3s;
-}
-
-.management-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-
-/* PHOTO AREA */
-
-.member-photo {
-    height: 220px;
-    background: #e9eef3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    font-size: 16px;
-}
-
-
-/* MEMBER INFORMATION */
-
-.member-info {
-    text-align: center;
-    padding: 18px;
-    border-top: 1px solid #ddd;
-}
-
-.member-info h3 {
-    margin: 0 0 7px;
-    font-size: 18px;
-}
-
-.member-info p {
-    margin: 0;
-    color: #666;
+    box-sizing: border-box;
 }
 
 
 /* ==========================================
-   MOBILE MANAGEMENT
+   MANAGEMENT HEADER
+========================================== */
+
+.management-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 55px;
+    margin-bottom: 35px;
+}
+
+
+/* TITLE */
+
+.management-header h2 {
+    margin: 0;
+    text-align: center;
+    color: #003b73;
+    font-size: 30px;
+}
+
+
+/* ==========================================
+   NAVIGATION BUTTONS
+========================================== */
+
+.management-nav-btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: #0077cc;
+    color: white;
+
+    padding: 11px 22px;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* NEXT ON RIGHT */
+
+.next-btn {
+    right: 0;
+}
+
+
+/* PREVIOUS ON LEFT */
+
+.previous-btn {
+    left: 0;
+}
+
+
+.management-nav-btn:hover {
+    background: #005fa3;
+    transform: translateY(-50%) scale(1.03);
+}
+
+
+/* ==========================================
+   MEMBER GRID
+========================================== */
+
+.management-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   MEMBER CARD
+========================================== */
+
+.management-member {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.10);
+
+    transition: 0.3s;
+}
+
+
+.management-member:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+/* ==========================================
+   PHOTO
+========================================== */
+
+.member-photo {
+    height: 220px;
+
+    background: #e9eef3;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #777;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   MEMBER INFORMATION
+========================================== */
+
+.member-info {
+    text-align: center;
+
+    padding: 18px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.member-info h3 {
+    margin: 0 0 7px;
+
+    font-size: 18px;
+}
+
+
+.member-info p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   MOBILE
 ========================================== */
 
 @media (max-width: 700px) {
 
     .management-card {
+        width: 94%;
         padding: 20px;
     }
 
+
     .management-header {
-        grid-template-columns: 90px 1fr 90px;
-        gap: 8px;
+        min-height: 50px;
+        margin-bottom: 25px;
     }
+
 
     .management-header h2 {
-        font-size: 21px;
+        font-size: 22px;
     }
 
+
     .management-nav-btn {
-        padding: 8px 10px;
+        padding: 8px 12px;
         font-size: 12px;
     }
 
+
     .management-grid {
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
+
 
     .member-photo {
         height: 200px;
