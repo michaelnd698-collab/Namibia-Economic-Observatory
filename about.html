@@ -192,28 +192,24 @@ fieldwork and data initiatives.
 
     <div class="card management-card">
 
-        <!-- MANAGEMENT HEADER -->
-
-        <div class="management-header">
-
-            <button
-                class="management-nav-btn"
-                onclick="showExecutiveMembers()">
-                Next ▶
-            </button>
-
-            <h2 id="managementTitle">
-                Board Members
-            </h2>
-
-        </div>
-
-
         <!-- ==============================
              BOARD MEMBERS
         ============================== -->
 
         <div id="boardMembers">
+
+            <div class="management-header">
+
+                <h2>Board Members</h2>
+
+                <button
+                    class="management-nav-btn next-btn"
+                    onclick="showExecutiveMembers()">
+                    Next ▶
+                </button>
+
+            </div>
+
 
             <div class="management-grid">
 
@@ -301,20 +297,17 @@ fieldwork and data initiatives.
              EXECUTIVE MEMBERS
         ============================== -->
 
-        <div id="executiveMembers"
-             style="display:none;">
+        <div id="executiveMembers" style="display:none;">
 
             <div class="management-header">
 
                 <button
-                    class="management-nav-btn"
+                    class="management-nav-btn previous-btn"
                     onclick="showBoardMembers()">
                     ◀ Previous
                 </button>
 
-                <h2>
-                    Executive Members
-                </h2>
+                <h2>Executive Members</h2>
 
                 <div></div>
 
@@ -404,7 +397,7 @@ fieldwork and data initiatives.
 
     </div>
 
-</section>  
+</section>
 
 <footer>
 
