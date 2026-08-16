@@ -718,7 +718,6 @@ function showBoardMembers(){
 
 }
 
-
 function showExecutiveMembers(){
 
     document.getElementById(
