@@ -736,45 +736,24 @@ document.addEventListener(
     }
 );
 
-/* ==========================================
-   MANAGEMENT NAVIGATION
-========================================== */
-
 function showBoardManagement(){
 
-    document.getElementById(
-        "boardManagement"
-    ).style.display = "block";
+    document.getElementById("boardManagement").style.display = "block";
 
-    document.getElementById(
-        "executiveManagement"
-    ).style.display = "none";
+    document.getElementById("executiveManagement").style.display = "none";
 
 }
-
 
 function showExecutiveManagement(){
 
-    document.getElementById(
-        "boardManagement"
-    ).style.display = "none";
+    document.getElementById("boardManagement").style.display = "none";
 
-    document.getElementById(
-        "executiveManagement"
-    ).style.display = "block";
+    document.getElementById("executiveManagement").style.display = "block";
 
 }
 
-
 function previousManagement(){
 
-    /*
-       Board Members is the first
-       management category.
-
-       Keep this empty for now,
-       or later connect it to
-       the previous section.
-    */
+    showBoardManagement();
 
 }
