@@ -1185,10 +1185,9 @@ margin-bottom:35px;
    MANAGEMENT SECTION
 ========================================== */
 
-#management-section {
-    width: 100%;
-    padding: 40px 20px 60px;
-    box-sizing: border-box;
+#management-section{
+    width:100%;
+    padding:40px 20px 70px;
 }
 
 
@@ -1196,13 +1195,15 @@ margin-bottom:35px;
    MANAGEMENT MAIN CARD
 ========================================== */
 
-#management-section .card {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 35px 40px 45px;
-    box-sizing: border-box;
-    border-radius: 20px;
+#management-section .management-card{
+    width:88%;
+    max-width:1050px;
+    margin:0 auto;
+    padding:35px 40px 45px;
+    background:#ffffff;
+    border-radius:22px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+    border:1px solid #f1f1f1;
 }
 
 
@@ -1210,63 +1211,45 @@ margin-bottom:35px;
    MANAGEMENT HEADER
 ========================================== */
 
-#management-section .dashboard-header {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 150px 1fr 150px;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 35px;
+#management-section .management-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    margin-bottom:35px;
+    gap:20px;
 }
 
-
-/* Management heading */
-
-#management-section .dashboard-header h2 {
-    margin: 0;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
+#management-section .management-header h2{
+    flex:1;
+    text-align:center;
+    margin:0;
+    color:#003366;
+    font-size:32px;
 }
 
 
 /* ==========================================
-   MANAGEMENT NAVIGATION BUTTONS
+   MANAGEMENT NAVIGATION
 ========================================== */
 
-#management-section .nav-btn {
-    width: 130px;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 25px;
-    background: #0077cc;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.25s ease;
+#management-section .management-nav-btn{
+    flex:0 0 auto;
+    min-width:130px;
+    padding:12px 22px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(135deg,#0077cc,#0055aa);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
 }
 
-
-/* Previous button */
-
-#management-section .dashboard-header .nav-btn:first-child {
-    justify-self: start;
-}
-
-
-/* Next button */
-
-#management-section .dashboard-header .nav-btn:last-child {
-    justify-self: end;
-}
-
-
-/* Hover */
-
-#management-section .nav-btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
+#management-section .management-nav-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,119,204,.25);
 }
 
 
@@ -1274,45 +1257,34 @@ margin-bottom:35px;
    MANAGEMENT MEMBER GRID
 ========================================== */
 
-#management-section .management-grid {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
+#management-section .management-grid{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
 
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 35px 40px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
 }
 
 
 /* ==========================================
-   INDIVIDUAL MEMBER CARD
+   MEMBER CARD
 ========================================== */
 
-#management-section .management-member {
-    width: 100%;
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
+#management-section .management-member{
+    background:#ffffff;
+    border-radius:18px;
+    overflow:hidden;
 
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.10);
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition:.3s;
 }
 
-
-/* Hover effect */
-
-#management-section .management-member:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.14);
+#management-section .management-member:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 30px rgba(0,0,0,.14);
 }
 
 
@@ -1320,19 +1292,17 @@ margin-bottom:35px;
    MEMBER PHOTO
 ========================================== */
 
-#management-section .member-photo {
-    width: 100%;
-    height: 260px;
+#management-section .member-photo{
+    width:100%;
+    height:240px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    background: #e8eef4;
-
-    color: #657383;
-
-    font-size: 18px;
+    background:#e8eef4;
+    color:#657383;
+    font-size:18px;
 }
 
 
@@ -1340,132 +1310,112 @@ margin-bottom:35px;
    MEMBER INFORMATION
 ========================================== */
 
-#management-section .member-info {
-    padding: 22px 20px 24px;
-
-    text-align: center;
-
-    background: white;
+#management-section .member-info{
+    padding:22px 20px;
+    text-align:center;
 }
 
-
-#management-section .member-info h3 {
-    margin: 0 0 8px;
-
-    font-size: 21px;
-    font-weight: 700;
-
-    color: #111;
+#management-section .member-info h3{
+    margin:0 0 8px;
+    font-size:21px;
+    color:#111;
 }
 
-
-#management-section .member-info p {
-    margin: 0;
-
-    font-size: 17px;
-
-    color: #59636d;
+#management-section .member-info p{
+    margin:0;
+    font-size:17px;
+    color:#59636d;
 }
 
 
 /* ==========================================
-   EXECUTIVE MANAGEMENT
+   MANAGEMENT CATEGORIES
 ========================================== */
 
-#executiveManagement {
-    width: 100%;
+#boardManagement,
+#executiveManagement{
+    width:100%;
 }
 
 
 /* ==========================================
-   BOARD MANAGEMENT
+   MOBILE
 ========================================== */
 
-#boardManagement {
-    width: 100%;
-}
+@media(max-width:768px){
 
-
-/* ==========================================
-   MOBILE RESPONSIVENESS
-========================================== */
-
-@media (max-width: 900px) {
-
-    #management-section .card {
-        width: 95%;
-        padding: 30px 25px 40px;
+    #management-section{
+        padding:30px 15px 50px;
     }
 
-
-    #management-section .management-grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
+    #management-section .management-card{
+        width:95%;
+        padding:25px 20px 35px;
     }
 
-
-    #management-section .dashboard-header {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    #management-section .management-header{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
     }
 
-
-    #management-section .dashboard-header h2 {
-        order: 1;
-        font-size: 28px;
+    #management-section .management-header h2{
+        grid-column:1 / -1;
+        grid-row:1;
+        font-size:28px;
     }
 
-
-    #management-section .dashboard-header .nav-btn:first-child {
-        order: 2;
-        justify-self: center;
+    #management-section .management-header .management-nav-btn:first-child{
+        grid-column:1;
+        grid-row:2;
     }
 
+    #management-section .management-header .management-nav-btn:last-child{
+        grid-column:2;
+        grid-row:2;
+        justify-self:end;
+    }
 
-    #management-section .dashboard-header .nav-btn:last-child {
-        order: 3;
-        justify-self: center;
+    #management-section .management-grid{
+        grid-template-columns:1fr;
+        max-width:550px;
     }
 
 }
 
 
 /* ==========================================
-   SMALL MOBILE DEVICES
+   SMALL MOBILE
 ========================================== */
 
-@media (max-width: 500px) {
+@media(max-width:500px){
 
-    #management-section {
-        padding: 25px 10px 40px;
+    #management-section{
+        padding-left:10px;
+        padding-right:10px;
     }
 
-
-    #management-section .card {
-        width: 100%;
-        padding: 25px 15px 35px;
-        border-radius: 15px;
+    #management-section .management-card{
+        width:100%;
+        padding:22px 15px 30px;
     }
 
-
-    #management-section .dashboard-header h2 {
-        font-size: 24px;
+    #management-section .management-header{
+        gap:10px;
     }
 
-
-    #management-section .management-grid {
-        gap: 25px;
+    #management-section .management-header h2{
+        font-size:24px;
     }
 
-
-    #management-section .member-photo {
-        height: 220px;
+    #management-section .management-nav-btn{
+        min-width:110px;
+        padding:10px 15px;
+        font-size:14px;
     }
 
-
-    #management-section .nav-btn {
-        width: 120px;
-        font-size: 15px;
+    #management-section .member-photo{
+        height:210px;
     }
 
 }
