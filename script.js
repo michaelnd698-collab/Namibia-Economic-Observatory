@@ -698,10 +698,10 @@ function selectRegion(regionId) {
 }
 
 /* ==========================================
-   MANAGEMENT DASHBOARD NAVIGATION
+   MANAGEMENT NAVIGATION
 ========================================== */
 
-function showExecutiveDashboard(){
+function showExecutiveMembers(){
 
     document.getElementById(
         "boardMembers"
@@ -713,7 +713,8 @@ function showExecutiveDashboard(){
 
 }
 
-function showBoardDashboard(){
+
+function showBoardMembers(){
 
     document.getElementById(
         "executiveMembers"
