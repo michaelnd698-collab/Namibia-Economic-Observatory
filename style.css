@@ -1187,57 +1187,84 @@ margin-bottom:35px;
 
 #management-section {
     width: 100%;
-    margin: 35px 0 60px;
+    margin: 40px 0 60px;
 }
 
 
 /* MAIN MANAGEMENT CARD */
 
 .management-card {
+
     width: 90%;
     max-width: 1100px;
+
     margin: 0 auto;
-    padding: 35px;
+
+    padding: 30px 35px 40px;
+
+    background: white;
+
+    border-radius: 22px;
+
     box-sizing: border-box;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+
 }
 
 
 /* ==========================================
-   MANAGEMENT HEADER
+   HEADER
 ========================================== */
 
 .management-header {
+
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     min-height: 55px;
-    margin-bottom: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+
 }
 
 
-/* TITLE */
-
 .management-header h2 {
+
     margin: 0;
-    text-align: center;
+
     color: #003b73;
+
     font-size: 30px;
+
+    text-align: center;
+
 }
 
 
 /* ==========================================
-   NAVIGATION BUTTONS
+   NAVIGATION
 ========================================== */
 
-.management-nav-btn {
+.management-next,
+.management-previous {
+
     position: absolute;
 
     top: 50%;
+
     transform: translateY(-50%);
 
     border: none;
+
     background: #0077cc;
+
     color: white;
 
     padding: 11px 22px;
@@ -1245,31 +1272,39 @@ margin-bottom:35px;
     border-radius: 25px;
 
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.3s;
+    z-index: 10;
+
 }
 
 
-/* NEXT ON RIGHT */
+/* NEXT = RIGHT */
 
-.next-btn {
+.management-next {
+
     right: 0;
+
 }
 
 
-/* PREVIOUS ON LEFT */
+/* PREVIOUS = LEFT */
 
-.previous-btn {
+.management-previous {
+
     left: 0;
+
 }
 
 
-.management-nav-btn:hover {
+.management-next:hover,
+.management-previous:hover {
+
     background: #005fa3;
-    transform: translateY(-50%) scale(1.03);
+
 }
 
 
@@ -1278,15 +1313,19 @@ margin-bottom:35px;
 ========================================== */
 
 .management-grid {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
     gap: 35px;
 
-    max-width: 900px;
-
-    margin: 0 auto;
 }
 
 
@@ -1295,6 +1334,7 @@ margin-bottom:35px;
 ========================================== */
 
 .management-member {
+
     background: white;
 
     border-radius: 18px;
@@ -1304,15 +1344,6 @@ margin-bottom:35px;
     box-shadow:
         0 5px 18px rgba(0,0,0,0.10);
 
-    transition: 0.3s;
-}
-
-
-.management-member:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.15);
 }
 
 
@@ -1321,6 +1352,7 @@ margin-bottom:35px;
 ========================================== */
 
 .member-photo {
+
     height: 220px;
 
     background: #e9eef3;
@@ -1328,11 +1360,11 @@ margin-bottom:35px;
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     color: #777;
 
-    font-size: 16px;
 }
 
 
@@ -1341,27 +1373,33 @@ margin-bottom:35px;
 ========================================== */
 
 .member-info {
+
     text-align: center;
 
     padding: 18px;
 
     border-top: 1px solid #ddd;
+
 }
 
 
 .member-info h3 {
-    margin: 0 0 7px;
+
+    margin: 0 0 8px;
 
     font-size: 18px;
+
 }
 
 
 .member-info p {
+
     margin: 0;
 
     color: #666;
 
     font-size: 16px;
+
 }
 
 
@@ -1372,37 +1410,37 @@ margin-bottom:35px;
 @media (max-width: 700px) {
 
     .management-card {
+
         width: 94%;
-        padding: 20px;
-    }
 
+        padding: 25px 15px 30px;
 
-    .management-header {
-        min-height: 50px;
-        margin-bottom: 25px;
     }
 
 
     .management-header h2 {
-        font-size: 22px;
+
+        font-size: 23px;
+
     }
 
 
-    .management-nav-btn {
+    .management-next,
+    .management-previous {
+
         padding: 8px 12px;
+
         font-size: 12px;
+
     }
 
 
     .management-grid {
+
+        width: 100%;
+
         grid-template-columns: 1fr;
 
-        gap: 25px;
-    }
-
-
-    .member-photo {
-        height: 200px;
     }
 
 }
