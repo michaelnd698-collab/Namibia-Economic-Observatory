@@ -740,26 +740,60 @@ document.addEventListener(
    MANAGEMENT NAVIGATION
 ========================================== */
 
-function showExecutiveManagement(){
+function hideAllManagement(){
 
-    document.getElementById("boardManagement").style.display = "none";
+    const managementSections = [
+        "boardManagement",
+        "executiveManagement"
+    ];
 
-    document.getElementById("executiveManagement").style.display = "block";
+    managementSections.forEach(function(id){
+
+        const section =
+            document.getElementById(id);
+
+        if(section){
+
+            section.style.display = "none";
+
+        }
+
+    });
 
 }
 
+
+/* ==========================================
+   BOARD MEMBERS
+========================================== */
 
 function showBoardManagement(){
 
-    document.getElementById("executiveManagement").style.display = "none";
+    hideAllManagement();
 
-    document.getElementById("boardManagement").style.display = "block";
+    const board =
+        document.getElementById("boardManagement");
+
+    if(!board) return;
+
+    board.style.display = "block";
 
 }
 
 
-function showAboutManagement(){
+/* ==========================================
+   EXECUTIVE MANAGEMENT
+========================================== */
 
-    showBoardManagement();
+function showExecutiveManagement(){
+
+    hideAllManagement();
+
+    const executive =
+        document.getElementById("executiveManagement");
+
+    if(!executive) return;
+
+    executive.style.display = "block";
 
 }
