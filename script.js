@@ -740,60 +740,51 @@ document.addEventListener(
    MANAGEMENT NAVIGATION
 ========================================== */
 
-function hideAllManagement(){
-
-    const managementSections = [
-        "boardManagement",
-        "executiveManagement"
-    ];
-
-    managementSections.forEach(function(id){
-
-        const section =
-            document.getElementById(id);
-
-        if(section){
-
-            section.style.display = "none";
-
-        }
-
-    });
-
-}
-
-
-/* ==========================================
-   BOARD MEMBERS
-========================================== */
-
-function showBoardManagement(){
-
-    hideAllManagement();
+function showExecutiveManagement(){
 
     const board =
         document.getElementById("boardManagement");
 
-    if(!board) return;
+    const executive =
+        document.getElementById("executiveManagement");
 
-    board.style.display = "block";
+    if(!board || !executive){
+
+        console.error(
+            "Management sections not found."
+        );
+
+        return;
+
+    }
+
+    board.style.display = "none";
+
+    executive.style.display = "block";
 
 }
 
 
-/* ==========================================
-   EXECUTIVE MANAGEMENT
-========================================== */
+function showBoardManagement(){
 
-function showExecutiveManagement(){
-
-    hideAllManagement();
+    const board =
+        document.getElementById("boardManagement");
 
     const executive =
         document.getElementById("executiveManagement");
 
-    if(!executive) return;
+    if(!board || !executive){
 
-    executive.style.display = "block";
+        console.error(
+            "Management sections not found."
+        );
+
+        return;
+
+    }
+
+    executive.style.display = "none";
+
+    board.style.display = "block";
 
 }
