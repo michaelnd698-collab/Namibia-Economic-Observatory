@@ -788,3 +788,100 @@ function showBoardManagement(){
     board.style.display = "block";
 
 }
+
+/* ==========================================
+   NEO GALLERY NAVIGATION
+========================================== */
+
+const galleryImages = [
+
+    "Nam currency.png",
+
+    "Heart of Namibia.png"
+
+];
+
+
+let currentGalleryImage = 0;
+
+
+/* ==========================================
+   UPDATE GALLERY
+========================================== */
+
+function updateGallery() {
+
+    const image =
+        document.getElementById("galleryImage");
+
+    const counter =
+        document.getElementById("galleryCounter");
+
+    if (!image) return;
+
+
+    image.style.opacity = "0";
+
+
+    setTimeout(function() {
+
+        image.src =
+            galleryImages[currentGalleryImage];
+
+        image.style.opacity = "1";
+
+
+        if (counter) {
+
+            counter.textContent =
+                (currentGalleryImage + 1)
+                + " / "
+                + galleryImages.length;
+
+        }
+
+    }, 150);
+
+}
+
+
+/* ==========================================
+   NEXT IMAGE
+========================================== */
+
+function nextGalleryImage() {
+
+    currentGalleryImage++;
+
+    if (
+        currentGalleryImage >=
+        galleryImages.length
+    ) {
+
+        currentGalleryImage = 0;
+
+    }
+
+    updateGallery();
+
+}
+
+
+/* ==========================================
+   PREVIOUS IMAGE
+========================================== */
+
+function previousGalleryImage() {
+
+    currentGalleryImage--;
+
+    if (currentGalleryImage < 0) {
+
+        currentGalleryImage =
+            galleryImages.length - 1;
+
+    }
+
+    updateGallery();
+
+}
