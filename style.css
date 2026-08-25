@@ -2664,3 +2664,118 @@ max-width:400px;
 .research-actions .download-btn:hover {
     background: #002244;
 }
+
+/* ==========================================
+   MANAGEMENT MEMBER PHOTO & INFO FIX
+========================================== */
+
+/* Keep each management card clean */
+#management-section .management-member {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    transition: 0.3s ease;
+}
+
+#management-section .management-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   PHOTO FRAME
+========================================== */
+
+#management-section .member-photo {
+    width: 100%;
+    height: 300px;
+
+    background: #e8eef4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   MEMBER IMAGE
+========================================== */
+
+#management-section .member-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* ==========================================
+   MEMBER INFORMATION
+========================================== */
+
+#management-section .member-info {
+    background: #f8fbff;
+
+    padding: 22px 20px 25px;
+
+    text-align: center;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+
+/* MEMBER NAME */
+
+#management-section .member-info h3 {
+    margin: 0 0 8px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #003366;
+}
+
+
+/* MEMBER POSITION */
+
+#management-section .member-info p {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    color: #59636d;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    #management-section .member-photo {
+        height: 280px;
+    }
+
+    #management-section .member-info {
+        padding: 20px 15px 22px;
+    }
+
+    #management-section .member-info h3 {
+        font-size: 20px;
+    }
+
+    #management-section .member-info p {
+        font-size: 16px;
+    }
+
+}
