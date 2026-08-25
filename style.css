@@ -2632,3 +2632,35 @@ max-width:400px;
     }
 
 }
+
+.research-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.research-actions .research-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #1476c6;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.research-actions .research-btn:hover {
+    background: #0b5ea8;
+    transform: translateY(-2px);
+}
+
+.research-actions .download-btn {
+    background: #003366;
+}
+
+.research-actions .download-btn:hover {
+    background: #002244;
+}
