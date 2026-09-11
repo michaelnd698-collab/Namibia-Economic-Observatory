@@ -127,8 +127,8 @@ function createInflationChart() {
                     4.1,
                     4.4,
                     4.4,
-                    4.7,
-                    4.5
+                    5.0,
+                    5.0
                 ],
 
                 borderColor: "#0077cc",
