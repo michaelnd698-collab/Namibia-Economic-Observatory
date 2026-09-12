@@ -1031,3 +1031,354 @@
     }
 
 }
+
+/* =========================================================
+   NEO MOBILE — HERO SECTION
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+
+        min-height: auto;
+
+        background-position: center;
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 18px 15px 22px;
+
+        text-align: center;
+    }
+
+
+    /* Research button */
+
+    .research-nav-btn {
+
+        font-size: 17px;
+
+        padding: 11px 22px;
+    }
+
+
+    /* Brand */
+
+    .brand {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+
+    .brand img {
+
+        width: 65px;
+
+        height: 65px;
+    }
+
+
+    .logo-text {
+
+        font-size: 21px;
+
+        white-space: normal;
+
+        line-height: 1.3;
+    }
+
+
+    /* About */
+
+    .about-nav-btn {
+
+        font-size: 17px;
+
+        padding: 10px 21px;
+    }
+
+
+
+    /* =====================================================
+       HERO CONTENT
+    ===================================================== */
+
+    .hero-content {
+
+        padding:
+
+            35px 15px
+            45px;
+    }
+
+
+    .hero-content p {
+
+        max-width: 600px;
+
+        font-size: 18px;
+
+        line-height: 1.55;
+
+        margin-top: 5px;
+    }
+
+
+
+    /* =====================================================
+       SEARCH BAR
+    ===================================================== */
+
+    .search-section {
+
+        margin-top: 28px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .search-wrapper {
+
+        width: 100%;
+
+        max-width: 620px;
+    }
+
+
+    .search-box {
+
+        height: 46px;
+
+        font-size: 15px;
+
+        padding-left: 48px;
+    }
+
+
+    .search-icon {
+
+        left: 17px;
+
+        font-size: 18px;
+    }
+
+
+
+    /* =====================================================
+       EXPLORE DATA
+    ===================================================== */
+
+    .hero-button {
+
+        margin:
+
+            8px 0
+            25px;
+    }
+
+
+    .cta-button {
+
+        padding: 13px 28px;
+
+        font-size: 15px;
+    }
+
+
+
+    /* =====================================================
+       SOCIAL ICONS
+    ===================================================== */
+
+    .social-icons {
+
+        width: 100%;
+
+        margin-top: 5px;
+
+        margin-bottom: 0;
+    }
+
+
+    .social-icons a {
+
+        width: 48px;
+
+        height: 48px;
+
+        margin: 6px;
+
+        font-size: 20px;
+    }
+
+
+
+    /* =====================================================
+       OPPORTUNITIES
+    ===================================================== */
+
+    .opportunities-button {
+
+        width: 100%;
+
+        margin-top: 25px;
+    }
+
+
+    .opportunities-btn {
+
+        padding: 12px 25px;
+
+        font-size: 16px;
+    }
+
+
+
+    /* =====================================================
+       MAIN CONTAINER
+    ===================================================== */
+
+    .container {
+
+        width: 95%;
+
+        margin-top: 0;
+
+        padding: 10px 0;
+    }
+
+
+    .card {
+
+        padding: 25px 18px;
+
+        margin: 25px 0;
+    }
+
+
+    .card h2 {
+
+        font-size: 30px;
+    }
+
+}
+
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+
+    .navbar {
+
+        gap: 15px;
+
+        padding-top: 15px;
+    }
+
+
+    .research-nav-btn {
+
+        font-size: 16px;
+
+        padding: 10px 19px;
+    }
+
+
+    .brand img {
+
+        width: 58px;
+
+        height: 58px;
+    }
+
+
+    .logo-text {
+
+        font-size: 19px;
+    }
+
+
+    .about-nav-btn {
+
+        font-size: 16px;
+
+        padding: 9px 18px;
+    }
+
+
+    .hero-content {
+
+        padding:
+
+            30px 12px
+            40px;
+    }
+
+
+    .hero-content p {
+
+        font-size: 17px;
+    }
+
+
+    .search-box {
+
+        height: 44px;
+
+        font-size: 14px;
+    }
+
+
+    .search-icon {
+
+        left: 15px;
+
+        font-size: 17px;
+    }
+
+
+    .social-icons a {
+
+        width: 44px;
+
+        height: 44px;
+
+        margin: 5px;
+
+        font-size: 18px;
+    }
+
+
+    .opportunities-btn {
+
+        font-size: 15px;
+
+        padding: 11px 22px;
+    }
+
+}
