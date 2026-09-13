@@ -1382,3 +1382,448 @@
     }
 
 }
+
+/* =========================================================
+   OPPORTUNITIES HUB — MOBILE
+========================================================= */
+
+@media screen and (max-width: 900px) {
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .opportunities-page-header {
+
+        padding: 50px 18px 55px;
+
+    }
+
+
+    .opportunities-page-header h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .opportunities-page-header p {
+
+        font-size: 17px;
+
+    }
+
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
+    .opportunities-container {
+
+        width: 94%;
+
+    }
+
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .opportunities-intro-section {
+
+        padding: 45px 15px 20px;
+
+    }
+
+
+    .opportunities-intro-card {
+
+        padding: 30px 22px;
+
+    }
+
+
+    .opportunities-intro-card h2 {
+
+        font-size: 27px;
+
+    }
+
+
+
+    /* =====================================================
+       CATEGORY GRID
+    ===================================================== */
+
+    .opportunity-category-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .opportunity-category-card {
+
+        min-height: 210px;
+
+        padding: 25px 18px;
+
+    }
+
+
+    .opportunity-category-card h3 {
+
+        font-size: 18px;
+
+    }
+
+
+
+    /* =====================================================
+       FILTERS
+    ===================================================== */
+
+    .opportunity-filter-card {
+
+        padding: 28px 22px;
+
+    }
+
+
+    .opportunity-filter-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+
+    /* =====================================================
+       OPPORTUNITY LIST
+    ===================================================== */
+
+    .opportunities-list {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+
+    /* =====================================================
+       SUBMISSION
+    ===================================================== */
+
+    .opportunity-submit-card {
+
+        padding: 35px 22px;
+
+    }
+
+
+    .opportunity-submit-card h2 {
+
+        font-size: 27px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+
+    .opportunities-page-header {
+
+        padding: 40px 15px 45px;
+
+    }
+
+
+    .opportunities-header-icon {
+
+        font-size: 38px;
+
+    }
+
+
+    .opportunities-page-header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .opportunities-page-header p {
+
+        font-size: 16px;
+
+    }
+
+
+    .opportunities-back-btn {
+
+        padding: 10px 23px;
+
+        font-size: 14px;
+
+    }
+
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .opportunities-intro-section {
+
+        padding: 35px 10px 15px;
+
+    }
+
+
+    .opportunities-intro-card {
+
+        padding: 27px 18px;
+
+    }
+
+
+    .opportunities-intro-card h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .opportunities-intro-card p {
+
+        font-size: 15px;
+
+    }
+
+
+
+    /* =====================================================
+       SECTION HEADINGS
+    ===================================================== */
+
+    .opportunities-section-heading {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .opportunities-section-heading h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .opportunities-section-heading p {
+
+        font-size: 15px;
+
+    }
+
+
+
+    /* =====================================================
+       CATEGORY CARDS
+    ===================================================== */
+
+    .opportunity-categories-section {
+
+        padding: 40px 10px 55px;
+
+    }
+
+
+    .opportunity-category-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+    }
+
+
+    .opportunity-category-card {
+
+        min-height: auto;
+
+        padding: 25px 20px;
+
+    }
+
+
+    .category-icon {
+
+        font-size: 34px;
+
+    }
+
+
+
+    /* =====================================================
+       FILTERS
+    ===================================================== */
+
+    .opportunity-filters-section {
+
+        padding: 50px 10px;
+
+    }
+
+
+    .opportunity-filter-card {
+
+        padding: 25px 18px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .opportunity-filter-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .opportunity-search input {
+
+        height: 46px;
+
+    }
+
+
+
+    /* =====================================================
+       OPPORTUNITY CARDS
+    ===================================================== */
+
+    .latest-opportunities-section {
+
+        padding: 50px 10px 60px;
+
+    }
+
+
+    .opportunity-card-content {
+
+        padding: 24px 20px;
+
+    }
+
+
+    .opportunity-card-top {
+
+        align-items: flex-start;
+
+    }
+
+
+    .opportunity-card h3 {
+
+        font-size: 20px;
+
+    }
+
+
+    .opportunity-meta span {
+
+        font-size: 13px;
+
+    }
+
+
+    .opportunity-tags span {
+
+        font-size: 11px;
+
+    }
+
+
+    .view-opportunity-btn {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+
+
+    /* =====================================================
+       SUBMISSION
+    ===================================================== */
+
+    .opportunity-submit-section {
+
+        padding: 55px 10px;
+
+    }
+
+
+    .opportunity-submit-card {
+
+        padding: 30px 18px;
+
+    }
+
+
+    .opportunity-submit-card h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .opportunity-submit-card p {
+
+        font-size: 15px;
+
+    }
+
+
+    .submit-opportunity-btn {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+
+
+    /* =====================================================
+       DISCLAIMER
+    ===================================================== */
+
+    .opportunity-disclaimer {
+
+        padding: 20px 15px 35px;
+
+    }
+
+}
