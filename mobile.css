@@ -182,36 +182,59 @@
     }
 
 
+    /* =========================================================
+   ABOUT PAGE — MOBILE
+========================================================= */
+
+@media screen and (max-width: 900px) {
+
+
     /* =====================================================
-       ABOUT PAGE
+       PAGE HEADER
     ===================================================== */
 
-    .about-card {
-        width: 94%;
-        padding: 28px 20px;
-        margin: 25px auto;
+    .page-header {
+        padding: 45px 18px;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .page-header p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       ABOUT SECTION
+    ===================================================== */
+
+    #about-section {
+        padding: 40px 12px 25px;
+    }
+
+    .about-main-card {
+        width: 100%;
+        padding: 25px 20px;
         border-radius: 18px;
     }
 
-    .about-text h2 {
-        font-size: 26px;
-        margin-top: 25px;
-    }
-
-    .about-text p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
 
     /* =====================================================
-       NEO STATISTICS
+       STATISTICS
     ===================================================== */
 
     .neo-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        margin: 35px 0;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+
+        margin-bottom: 35px;
     }
 
     .neo-stat {
@@ -223,7 +246,46 @@
     }
 
     .neo-stat p {
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+
+    /* =====================================================
+       ABOUT + FOUNDER
+    ===================================================== */
+
+    .about-founder-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .about-text {
+        padding: 0;
+    }
+
+    .about-text h2 {
+        font-size: 29px;
+    }
+
+    .about-text > p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .about-subsection {
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .about-subsection h3 {
+        font-size: 20px;
+    }
+
+    .about-subsection p {
+        font-size: 15px;
     }
 
 
@@ -231,39 +293,271 @@
        FOUNDER
     ===================================================== */
 
-    .founder-info {
-        display: flex;
-        flex-direction: column;
-
-        gap: 25px;
-        margin-top: 40px;
-
-        text-align: center;
-    }
-
-    .founder-contact {
-        width: 100%;
-    }
-
-    .founder-list {
-        text-align: left;
-        display: inline-block;
-    }
-
-    .founder-list li {
-        font-size: 15px;
-    }
-
-    .founder-photo {
-        width: 100%;
-        text-align: center;
+    .founder-card {
+        padding: 25px 20px;
     }
 
     .founder-photo img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
+        width: 190px;
+        height: 190px;
     }
+
+    .founder-details h2 {
+        font-size: 23px;
+    }
+
+    .founder-description {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    .neo-gallery-section {
+        padding: 25px 12px 30px;
+    }
+
+    .gallery-card {
+        width: 100%;
+        padding: 25px 15px;
+        border-radius: 18px;
+    }
+
+    .gallery-header {
+        margin-bottom: 22px;
+    }
+
+    .gallery-header h2 {
+        font-size: 27px;
+    }
+
+    .gallery-header p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       GALLERY VIEWER
+    ===================================================== */
+
+    .gallery-container {
+
+        grid-template-columns:
+            42px minmax(0, 1fr) 42px;
+
+        gap: 8px;
+    }
+
+    .gallery-viewer {
+
+        height: 270px;
+
+        border-radius: 14px;
+    }
+
+    .gallery-btn {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 17px;
+    }
+
+    .gallery-description {
+
+        margin-top: 18px;
+
+        padding: 17px 14px;
+    }
+
+    .gallery-description h3 {
+        font-size: 18px;
+    }
+
+    .gallery-description p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       MANAGEMENT
+    ===================================================== */
+
+    #management-section {
+        padding: 30px 12px 50px;
+    }
+
+    .management-card {
+        width: 100%;
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+
+    /* =====================================================
+       MANAGEMENT HEADER
+    ===================================================== */
+
+    .management-header {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-bottom: 28px;
+
+        text-align: center;
+    }
+
+    .management-header h2 {
+        font-size: 28px;
+    }
+
+    .management-header p {
+        font-size: 14px;
+    }
+
+    .management-nav-btn {
+        justify-self: center;
+    }
+
+
+    /* =====================================================
+       MEMBER GRID
+    ===================================================== */
+
+    .management-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    .member-photo {
+        height: 210px;
+    }
+
+    .member-info {
+        padding: 18px 12px 20px;
+    }
+
+    .member-info h3 {
+        font-size: 18px;
+    }
+
+    .member-info p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 520px) {
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .page-header {
+        padding: 38px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+    .page-header p {
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       STATISTICS
+    ===================================================== */
+
+    .neo-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .neo-stat {
+        padding: 17px 8px;
+    }
+
+    .neo-stat-icon {
+        font-size: 21px;
+    }
+
+    .neo-stat h3 {
+        font-size: 29px;
+    }
+
+    .neo-stat p {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       FOUNDER
+    ===================================================== */
+
+    .founder-photo img {
+        width: 165px;
+        height: 165px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    .gallery-container {
+
+        grid-template-columns:
+            34px minmax(0, 1fr) 34px;
+
+        gap: 5px;
+    }
+
+    .gallery-viewer {
+        height: 220px;
+    }
+
+    .gallery-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       MANAGEMENT
+    ===================================================== */
+
+    .management-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .member-photo {
+        height: 240px;
+    }
+
+    .management-nav-btn {
+        width: 125px;
+    }
+
+}
 
 
     /* =====================================================
@@ -436,227 +730,6 @@
         max-width: 400px;
         min-width: 0;
     }
-
-
-    /* =====================================================
-       MANAGEMENT SECTION
-       
-       MOBILE-SPECIFIC
-    ===================================================== */
-
-    #management-section {
-        width: 100%;
-        padding: 25px 10px 45px;
-        overflow: hidden;
-    }
-
-
-    /* Management main card */
-
-    #management-section .card {
-        width: 100%;
-        max-width: 100%;
-        padding: 22px 15px 35px;
-        margin: 0 auto;
-        border-radius: 16px;
-    }
-
-
-    /* Management header */
-
-    #management-section .dashboard-header {
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "previous"
-            "next";
-
-        gap: 12px;
-
-        margin-bottom: 28px;
-        padding: 0;
-
-        background: transparent;
-    }
-
-
-    #management-section .dashboard-header h2 {
-        grid-area: title;
-
-        margin: 0;
-
-        text-align: center;
-
-        font-size: 25px;
-        line-height: 1.3;
-
-        color: #003366;
-    }
-
-
-    /* Management Previous */
-
-    #management-section .dashboard-header .nav-btn:first-child {
-        grid-area: previous;
-
-        justify-self: center;
-    }
-
-
-    /* Management Next */
-
-    #management-section .dashboard-header .nav-btn:last-child {
-        grid-area: next;
-
-        justify-self: center;
-    }
-
-
-    /* Management buttons */
-
-    #management-section .nav-btn {
-        width: 130px;
-        min-height: 44px;
-
-        padding: 10px 18px;
-
-        border-radius: 30px;
-
-        font-size: 15px;
-    }
-
-
-    /* Management member grid */
-
-    #management-section .management-grid {
-        width: 100%;
-        max-width: 600px;
-
-        margin: 0 auto;
-
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 22px;
-    }
-
-
-    /* Member card */
-
-    #management-section .management-member {
-        width: 100%;
-        max-width: 100%;
-
-        border-radius: 17px;
-
-        background: white;
-
-        overflow: hidden;
-    }
-
-
-    /* Member image area */
-
-    #management-section .member-photo {
-        width: 100%;
-
-        height: 230px;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        background: #e8eef4;
-
-        overflow: hidden;
-    }
-
-
-    /* Actual member images */
-
-    #management-section .member-photo img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: contain;
-
-        display: block;
-    }
-
-
-    /* Member information */
-
-    #management-section .member-info {
-        width: 100%;
-
-        padding: 18px 15px 20px;
-
-        text-align: center;
-
-        background: #f9fbff;
-    }
-
-    #management-section .member-info h3 {
-        font-size: 20px;
-        margin-bottom: 5px;
-    }
-
-    #management-section .member-info p {
-        font-size: 16px;
-    }
-
-
-    /* =====================================================
-       GALLERY
-    ===================================================== */
-
-    .gallery-section {
-        width: 94%;
-        margin: 30px auto;
-        padding: 28px 15px;
-    }
-
-    .gallery-section h2 {
-        font-size: 28px;
-    }
-
-    .gallery-section > p {
-        font-size: 16px;
-    }
-
-    .gallery-container {
-        gap: 10px;
-    }
-
-    .gallery-viewer {
-        width: 100%;
-        height: 280px;
-    }
-
-    .gallery-btn {
-        width: 45px;
-        height: 45px;
-        min-width: 45px;
-        font-size: 20px;
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    footer {
-        padding: 25px 15px;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-}
 
 
 /* =========================================================
