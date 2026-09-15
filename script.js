@@ -793,15 +793,25 @@ function showBoardManagement(){
 
 }
 
-/* ==========================================
-   NEO GALLERY NAVIGATION
-========================================== */
+/* =========================================================
+   NEO GALLERY
+========================================================= */
 
 const galleryImages = [
 
-    "Nam currency.png",
+    {
+        image: "Nam currency.png",
+        title: "Namibian Currency & Economic Data",
+        description:
+            "Economic data initiatives and visualisations relating to Namibia's monetary and economic environment."
+    },
 
-    "Heart of Namibia.png"
+    {
+        image: "Heart of Namibia.png",
+        title: "Research Across Namibia",
+        description:
+            "Showcasing the NEO focus on regional research, economic data and evidence-based insights."
+    }
 
 ];
 
@@ -809,9 +819,6 @@ const galleryImages = [
 let currentGalleryImage = 0;
 
 
-/* ==========================================
-   UPDATE GALLERY
-========================================== */
 
 function updateGallery() {
 
@@ -821,37 +828,49 @@ function updateGallery() {
     const counter =
         document.getElementById("galleryCounter");
 
+    const title =
+        document.getElementById("galleryTitle");
+
+    const text =
+        document.getElementById("galleryText");
+
+
     if (!image) return;
+
+
+    const current =
+        galleryImages[currentGalleryImage];
 
 
     image.style.opacity = "0";
 
 
-    setTimeout(function() {
+    setTimeout(function () {
 
-        image.src =
-            galleryImages[currentGalleryImage];
+        image.src = current.image;
 
-        image.style.opacity = "1";
+        image.alt = current.title;
 
+        if (title) {
+            title.textContent = current.title;
+        }
+
+        if (text) {
+            text.textContent = current.description;
+        }
 
         if (counter) {
-
             counter.textContent =
-                (currentGalleryImage + 1)
-                + " / "
-                + galleryImages.length;
-
+                `${currentGalleryImage + 1} / ${galleryImages.length}`;
         }
+
+        image.style.opacity = "1";
 
     }, 150);
 
 }
 
 
-/* ==========================================
-   NEXT IMAGE
-========================================== */
 
 function nextGalleryImage() {
 
@@ -871,15 +890,14 @@ function nextGalleryImage() {
 }
 
 
-/* ==========================================
-   PREVIOUS IMAGE
-========================================== */
 
 function previousGalleryImage() {
 
     currentGalleryImage--;
 
-    if (currentGalleryImage < 0) {
+    if (
+        currentGalleryImage < 0
+    ) {
 
         currentGalleryImage =
             galleryImages.length - 1;
@@ -889,3 +907,14 @@ function previousGalleryImage() {
     updateGallery();
 
 }
+
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        updateGallery();
+
+    }
+);
