@@ -482,148 +482,119 @@ function showRegionalDashboard() {
 
 const regionsData = {
 
-    khomas: {
-
-        name: "Khomas",
-        capital: "Windhoek",
-        population: "494,605",
-        employment: "High",
-        development: "High"
-
-    },
-
-    erongo: {
-
-        name: "Erongo",
-        capital: "Swakopmund",
-        population: "204,000",
-        employment: "Medium",
-        development: "High"
-
-    },
-
-    oshana: {
-
-        name: "Oshana",
-        capital: "Oshakati",
-        population: "242,000",
-        employment: "Medium",
-        development: "Medium"
-
-    },
-
-    omusati: {
-
-        name: "Omusati",
-        capital: "Outapi",
-        population: "248,000",
-        employment: "Medium",
-        development: "Medium"
-
-    },
-
-    ohangwena: {
-
-        name: "Ohangwena",
-        capital: "Eenhana",
-        population: "Unknown",
-        employment: "Medium",
-        development: "Medium"
-
-    },
-
-    oshikoto: {
-
-        name: "Oshikoto",
-        capital: "Tsumeb",
-        population: "Unknown",
-        employment: "Medium",
-        development: "Medium"
-
-    },
-
-    kunene: {
-
-        name: "Kunene",
-        capital: "Opuwo",
-        population: "Unknown",
-        employment: "Low",
-        development: "Medium"
-
-    },
-
-    otjozondjupa: {
-
-        name: "Otjozondjupa",
-        capital: "Otjiwarongo",
-        population: "Unknown",
-        employment: "Medium",
-        development: "Medium"
-
-    },
-
-    omaheke: {
-
-        name: "Omaheke",
-        capital: "Gobabis",
-        population: "Unknown",
-        employment: "Medium",
-        development: "Medium"
-
-    },
-
-    hardap: {
-
-        name: "Hardap",
-        capital: "Mariental",
-        population: "Unknown",
-        employment: "Medium",
-        development: "Medium"
-
-    },
-
-    karas: {
-
-        name: "//Kharas",
-        capital: "Keetmanshoop",
-        population: "Unknown",
-        employment: "Medium",
-        development: "Medium"
-
-    },
-
-    kavangoEast: {
-
-        name: "Kavango East",
-        capital: "Rundu",
-        population: "118,000",
-        employment: "Low",
-        development: "Medium"
-
-    },
-
-    kavangoWest: {
-
-        name: "Kavango West",
-        capital: "Nkurenkuru",
-        population: "Unknown",
-        employment: "Low",
-        development: "Medium"
-
-    },
-
-    zambezi: {
-
+    NACA: {
         name: "Zambezi",
         capital: "Katima Mulilo",
         population: "100,000",
         employment: "Low",
         development: "Medium"
+    },
 
+    NAER: {
+        name: "Erongo",
+        capital: "Swakopmund",
+        population: "204,000",
+        employment: "Medium",
+        development: "High"
+    },
+
+    NAHA: {
+        name: "Hardap",
+        capital: "Mariental",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
+
+    NAKA: {
+        name: "//Kharas",
+        capital: "Keetmanshoop",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
+
+    NAKE: {
+        name: "Kavango East",
+        capital: "Rundu",
+        population: "118,000",
+        employment: "Low",
+        development: "Medium"
+    },
+
+    NAKH: {
+        name: "Khomas",
+        capital: "Windhoek",
+        population: "494,605",
+        employment: "High",
+        development: "High"
+    },
+
+    NAKU: {
+        name: "Kunene",
+        capital: "Opuwo",
+        population: "Unknown",
+        employment: "Low",
+        development: "Medium"
+    },
+
+    NAKW: {
+        name: "Kavango West",
+        capital: "Nkurenkuru",
+        population: "Unknown",
+        employment: "Low",
+        development: "Medium"
+    },
+
+    NAOD: {
+        name: "Otjozondjupa",
+        capital: "Otjiwarongo",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
+
+    NAOH: {
+        name: "Omaheke",
+        capital: "Gobabis",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
+
+    NAON: {
+        name: "Oshana",
+        capital: "Oshakati",
+        population: "242,000",
+        employment: "Medium",
+        development: "Medium"
+    },
+
+    NAOS: {
+        name: "Omusati",
+        capital: "Outapi",
+        population: "248,000",
+        employment: "Medium",
+        development: "Medium"
+    },
+
+    NAOT: {
+        name: "Oshikoto",
+        capital: "Tsumeb",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
+    },
+
+    NAOW: {
+        name: "Ohangwena",
+        capital: "Eenhana",
+        population: "Unknown",
+        employment: "Medium",
+        development: "Medium"
     }
 
 };
-
 
 /* ==========================================
    SELECT REGION
