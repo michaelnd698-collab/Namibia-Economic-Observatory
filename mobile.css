@@ -180,7 +180,216 @@
         max-width: 100%;
         font-size: 16px;
     }
+   
+/* =========================================================
+   TABLET: FOCUS AREAS AND NEWS
+========================================================= */
 
+@media screen and (max-width: 950px) {
+
+    .card {
+
+        padding: 35px 30px;
+
+    }
+
+
+    .focus-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .news-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+
+        width: 94%;
+
+        margin-top: -35px;
+
+    }
+
+
+    .card {
+
+        padding: 30px 20px;
+
+        margin: 30px 0;
+
+        border-radius: 18px;
+
+    }
+
+
+    .card h2 {
+
+        font-size: 28px;
+
+        margin-bottom: 28px;
+
+    }
+
+
+    /* Focus */
+
+    .focus-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .focus-card {
+
+        min-height: 170px;
+
+        padding: 28px 22px;
+
+    }
+
+
+    /* News */
+
+    .news-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .news-card img {
+
+        height: 210px;
+
+    }
+
+
+    .news-content {
+
+        padding: 22px 20px 23px;
+
+    }
+
+
+    .news-content h3 {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .container {
+
+        width: 95%;
+
+    }
+
+
+    .card {
+
+        padding: 25px 15px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .card h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .focus-card {
+
+        padding: 25px 18px;
+
+    }
+
+
+    .focus-card i {
+
+        width: 56px;
+
+        height: 56px;
+
+        font-size: 24px;
+
+    }
+
+
+    .focus-card h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .focus-card p {
+
+        font-size: 14px;
+
+    }
+
+
+    .news-card img {
+
+        height: 190px;
+
+    }
+
+
+    .news-content {
+
+        padding: 20px 18px;
+
+    }
+
+
+    .news-content h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .news-content p {
+
+        font-size: 14px;
+
+    }
+
+}
 
     /* =========================================================
    ABOUT PAGE — MOBILE
