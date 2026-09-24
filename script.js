@@ -111,8 +111,7 @@ function createInflationChart() {
                "May",
                "Jun",
                "Jul",
-               "Aug",
-               "Sep"
+               "Aug"
             ],
 
             datasets: [{
@@ -127,7 +126,6 @@ function createInflationChart() {
                     4.1,
                     4.4,
                     4.4,
-                    5.0,
                     5.0
                 ],
 
