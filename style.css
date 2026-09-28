@@ -954,303 +954,633 @@ html{
 
 
 /* =========================================================
+   NEO MODERN DASHBOARD STYLE
+   ========================================================= */
+
+
+/* =========================================================
    SECTION BACKGROUND
 ========================================================= */
 
 .section-grey {
 
     background: #f5f8fc;
+
 }
 
-/* ECONOMIC TICKER */
 
-.ticker{
+/* =========================================================
+   ECONOMIC TICKER
+========================================================= */
 
-background:#002244;
+.ticker {
 
-color:white;
+    background: linear-gradient(
+        135deg,
+        #002b55,
+        #003f78
+    );
 
-overflow:hidden;
+    color: #ffffff;
 
-white-space:nowrap;
+    overflow: hidden;
 
-padding:12px 0;
+    white-space: nowrap;
 
-font-weight:bold;
+    padding: 13px 0;
 
-position:relative;
+    font-weight: 600;
+
+    position: relative;
+
+    box-shadow:
+        0 5px 18px rgba(0, 63, 120, 0.18);
+
 }
 
-.ticker-content{
 
-display:inline-block;
+.ticker-content {
 
-padding-left:100%;
+    display: inline-block;
 
-animation:ticker 25s linear infinite;
+    padding-left: 100%;
+
+    animation: ticker 25s linear infinite;
+
 }
 
-@keyframes ticker{
 
-0%{
-transform:translateX(0);
+@keyframes ticker {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
 }
 
-100%{
-transform:translateX(-100%);
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    background: linear-gradient(
+        135deg,
+        #002b55,
+        #003f78
+    );
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 60px;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 -8px 25px rgba(0, 51, 102, 0.10);
+
 }
+
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.dashboard-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
 }
-    
-/* FOOTER */
 
-footer{
-    background:#002244;
-    color:white;
 
-    text-align:center;
+/* Dashboard title */
 
-    padding:25px;
+.dashboard-header h1,
+.dashboard-header h2 {
 
-    margin-top:40px;
+    color: #003366;
+
+    font-weight: 700;
+
 }
-    
-/* INFLATION DASHBOARD */
 
-.kpi-grid{
-    display:grid;
+
+/* =========================================================
+   DASHBOARD DESCRIPTION
+========================================================= */
+
+.dashboard-description {
+
+    max-width: 850px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+
+    color: #5f6b76;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   KPI GRID
+========================================================= */
+
+.kpi-grid {
+
+    display: grid;
+
     grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    margin-bottom:40px;
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+
+    margin-bottom: 40px;
+
 }
 
-.kpi-card{
 
-    background:white;
+/* =========================================================
+   KPI CARD
+========================================================= */
 
-    border-radius:20px;
+.kpi-card {
 
-    padding:30px;
+    background: #ffffff;
 
-    text-align:center;
+    border-radius: 20px;
 
-    transition:.35s;
+    padding: 30px 25px;
 
-    border:1px solid #eef2f7;
+    text-align: center;
+
+    border: 1px solid #e3edf6;
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.06);
+        0 10px 30px rgba(0, 51, 102, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
 
 }
-    
-.kpi-card:hover{
 
-    transform:translateY(-8px);
+
+/* Small blue accent at top */
+
+.kpi-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #0077cc,
+        #1496e8
+    );
+
+}
+
+
+/* Hover */
+
+.kpi-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #c9e2f5;
 
     box-shadow:
-    0 18px 35px rgba(0,119,204,.18);
-
-}
-    
-.kpi-card h3{
-    color:#555;
-    margin-bottom:15px;
-}
-
-.kpi-card h1{
-
-    color:#0077cc;
-
-    font-size:42px;
-
-    margin-top:12px;
-
-    margin-bottom:8px;
-
-    font-weight:700;
+        0 18px 40px rgba(0, 119, 204, 0.16);
 
 }
 
-.chart-container{
-    position:relative;
 
-    width:100%;
-    height:420px;
+/* KPI label */
 
-    background:white;
+.kpi-card h3 {
 
-    padding:30px;
+    color: #5c6873;
 
-    border-radius:20px;
+    margin: 5px 0 12px;
 
-    margin-top:40px;
+    font-size: 16px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-
-    overflow:hidden;
-}
-
-.chart-container canvas{
-    display:block;
-
-    width:100% !important;
-    height:100% !important;
-}
-
-.dashboard-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
-    flex-wrap:wrap;
-}
-
-.dashboard-description{
-
-    text-align:center;
-
-    color:#666;
-
-    font-size:18px;
-
-    margin-bottom:35px;
+    font-weight: 600;
 
 }
-    
-.nav-btn{
 
-    background:linear-gradient(
-    135deg,
-    #0077cc,
-    #0055aa);
 
-    color:white;
+/* KPI value */
 
-    border:none;
+.kpi-card h1 {
 
-    padding:12px 28px;
+    color: #0077cc;
 
-    border-radius:50px;
+    font-size: 42px;
 
-    font-size:16px;
+    line-height: 1.1;
 
-    font-weight:600;
+    margin: 8px 0;
 
-    cursor:pointer;
+    font-weight: 750;
 
-    transition:.35s;
+}
+
+
+/* =========================================================
+   CHART CONTAINER
+========================================================= */
+
+.chart-container {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 420px;
+
+    background: #ffffff;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    border-radius: 22px;
+
+    margin-top: 35px;
+
+    border: 1px solid #e1eaf2;
 
     box-shadow:
-    0 8px 18px rgba(0,119,204,.25);
+        0 10px 30px rgba(0, 51, 102, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
 }
 
-.nav-btn:hover{
 
-    transform:translateY(-3px);
+/* Chart hover */
+
+.chart-container:hover {
+
+    transform: translateY(-4px);
 
     box-shadow:
-    0 14px 28px rgba(0,119,204,.35);
+        0 16px 38px rgba(0, 119, 204, 0.12);
 
 }
 
-.cost-table{
 
-    width:100%;
+/* Canvas */
 
-    border-collapse:collapse;
+.chart-container canvas {
 
-    overflow:hidden;
+    display: block;
 
-    border-radius:18px;
+    width: 100% !important;
 
-    background:white;
+    height: 100% !important;
+
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTONS
+========================================================= */
+
+.nav-btn {
+
+    background: linear-gradient(
+        135deg,
+        #0077cc,
+        #0055aa
+    );
+
+    color: #ffffff;
+
+    border: none;
+
+    padding: 12px 26px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
 
     box-shadow:
-    0 8px 20px rgba(0,0,0,.05);
+        0 7px 18px rgba(0, 119, 204, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 
 }
+
+
+/* Hover */
+
+.nav-btn:hover {
+
+    background: linear-gradient(
+        135deg,
+        #0088df,
+        #0063bd
+    );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(0, 119, 204, 0.35);
+
+}
+
+
+/* Active */
+
+.nav-btn:active {
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   RESEARCH NAVIGATION BUTTON
+========================================================= */
+
+.research-nav-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 26px;
+
+    background: linear-gradient(
+        135deg,
+        #0077cc,
+        #0055aa
+    );
+
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 18px rgba(0, 119, 204, 0.24);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.research-nav-btn:hover {
+
+    background: linear-gradient(
+        135deg,
+        #0088df,
+        #0063bd
+    );
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(0, 119, 204, 0.35);
+
+}
+
+
+/* =========================================================
+   COST TABLE
+========================================================= */
+
+.cost-table {
+
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce6ef;
+
+    box-shadow:
+        0 10px 28px rgba(0, 51, 102, 0.07);
+
+}
+
+
+/* Table cells */
 
 .cost-table th,
-.cost-table td{
+.cost-table td {
 
-    padding:15px;
+    padding: 16px;
 
-    border-bottom:1px solid #ececec;
+    border-bottom: 1px solid #e8edf2;
 
-}
-
-.cost-table th{
-
-    background:#003366;
-
-    color:white;
-
-    padding:16px;
-
-    font-size:17px;
+    text-align: left;
 
 }
 
-.cost-table tr:hover{
 
-    background:#f4f9ff;
+/* Table heading */
 
-}
-    
-/* MOBILE */
+.cost-table th {
 
-.research-nav-btn{
+    background: linear-gradient(
+        135deg,
+        #003366,
+        #004d85
+    );
 
-background:#1476c6;
+    color: #ffffff;
 
-color:white;
+    padding: 17px;
 
-padding:12px 24px;
+    font-size: 15px;
 
-border-radius:30px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-transition:.3s;
+    font-weight: 700;
 
 }
 
-.research-nav-btn:hover{
 
-background:#0b5ea8;
+/* Remove final border */
 
-transform:translateY(-2px);
+.cost-table tr:last-child td {
 
-}
-
-.gallery-section{
-
-    margin-top:50px;
-
-    padding-top:30px;
-
-    border-top:1px solid #ddd;
+    border-bottom: none;
 
 }
 
-.gallery-section h2{
 
-    margin-bottom:15px;
+/* Table hover */
+
+.cost-table tbody tr {
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.cost-table tbody tr:hover {
+
+    background: #f2f8fd;
 
 }
 
-.gallery-section p{
 
-    text-align:center;
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
 
-    color:#666;
+.gallery-section {
 
-    margin-bottom:30px;
+    margin-top: 55px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #dce6ef;
 
 }
+
+
+/* Gallery title */
+
+.gallery-section h2 {
+
+    text-align: center;
+
+    color: #003366;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* Gallery description */
+
+.gallery-section p {
+
+    max-width: 750px;
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+
+    color: #65717c;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   MODERN SECTION CARDS
+   Use these around dashboard components where applicable
+========================================================= */
+
+.dashboard-card {
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    border: 1px solid #e1eaf2;
+
+    box-shadow:
+        0 10px 30px rgba(0, 51, 102, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.dashboard-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 17px 38px rgba(0, 119, 204, 0.13);
+
+}
+
 
 /* =========================================================
    ABOUT PAGE
