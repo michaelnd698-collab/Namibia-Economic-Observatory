@@ -769,48 +769,220 @@
 }
 
 
-    /* =====================================================
-       RESEARCH HUB
-    ===================================================== */
+    /* =========================================================
+   MOBILE RESEARCH HUB
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+
+        padding: 55px 20px 50px;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 32px;
+
+        line-height: 1.25;
+    }
+
+
+    .page-header p {
+
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
 
     .research-section {
-        width: 94%;
-        margin: 35px auto;
+
+        width: 92%;
+
+        margin: 55px auto;
+
         padding: 0;
     }
 
-    .research-section h2 {
-        font-size: 27px;
+
+    .research-section > h2 {
+
+        font-size: 29px;
+
+        margin-bottom: 30px;
     }
+
 
     .research-card {
-        padding: 22px 18px;
-        border-radius: 16px;
+
+        padding: 25px 22px;
+
+        border-radius: 18px;
     }
 
+
     .research-card h3 {
+
         font-size: 21px;
     }
 
-    .research-card p {
+
+    .category-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .category-card {
+
+        padding: 25px 20px;
+
+        font-size: 18px;
+    }
+
+
+    .publications-section {
+
+        padding: 55px 15px 65px;
+    }
+
+
+    .publications-container {
+
+        width: 94%;
+    }
+
+
+    .publications-header h2 {
+
+        font-size: 29px;
+    }
+
+
+    .publications-header p {
+
         font-size: 16px;
     }
 
-    .research-btn {
-        width: 100%;
-        text-align: center;
-        padding: 12px 20px;
-    }
 
-    .category-grid {
+    .publication-card {
+
         grid-template-columns: 1fr;
-        gap: 15px;
+
+        min-height: auto;
     }
 
-    .category-card {
-        padding: 25px 18px;
-        font-size: 19px;
+
+    .publication-image {
+
+        order: -1;
+
+        min-height: 230px;
+
+        height: 230px;
     }
+
+
+    .publication-content {
+
+        padding: 27px 23px;
+    }
+
+
+    .publication-content h3 {
+
+        font-size: 22px;
+    }
+
+
+    .publication-description {
+
+        font-size: 15px;
+    }
+
+
+    .publication-details {
+
+        flex-direction: column;
+
+        gap: 9px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .publication-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .publication-btn {
+
+        width: 100%;
+    }
+
+
+    .portal-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .portal-card {
+
+        padding: 27px 22px;
+    }
+
+
+    .upload-card {
+
+        padding: 32px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .upload-card h3 {
+
+        font-size: 23px;
+    }
+
+
+    .upload-card > p:first-of-type {
+
+        font-size: 15px;
+    }
+
+
+    .upload-btn {
+
+        width: 100%;
+
+        padding: 13px 20px;
+    }
+
+
+    .guideline-card {
+
+        padding: 27px 22px;
+    }
+
+
+    .submission-progress {
+
+        padding: 27px 20px;
+    }
+
+}
 
 
     /* =====================================================
