@@ -77,10 +77,15 @@ html{
 
     z-index: 100;
 
-    display: flex;
+    display: grid;
 
-    justify-content: space-between;
+    grid-template-columns: 1fr auto 1fr;
+
     align-items: center;
+
+    width: 100%;
+
+    box-sizing: border-box;
 
     padding: 18px 6%;
 
@@ -98,11 +103,16 @@ html{
 
 .research-nav-btn {
 
-    display: inline-block;
+    justify-self: start;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
 
     padding: 15px 34px;
 
-    background: #1b82e4;
+    background: #087bd1;
 
     color: white;
 
@@ -114,17 +124,26 @@ html{
 
     border-radius: 40px;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 
     z-index: 101;
+
+    box-shadow:
+        0 8px 22px rgba(0, 119, 204, 0.30);
 }
 
 
 .research-nav-btn:hover {
 
-    background: #156cc0;
+    background: #006bb9;
 
     transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 119, 204, 0.42);
 }
 
 /* =========================================================
@@ -133,18 +152,29 @@ html{
 
 .brand {
 
+    grid-column: 2;
+
     display: flex;
 
     align-items: center;
 
-    gap: 18px;
-
-    flex: 1;
-
     justify-content: center;
 
-    margin-left: 80px;
+    gap: 18px;
+
+    /* IMPORTANT:
+       No flex: 1
+       No margin-left
+       No margin-right
+    */
+
+    margin: 0;
+
+    padding: 0;
+
+    white-space: nowrap;
 }
+
 
 /* =========================================================
    NEO LOGO
@@ -153,6 +183,7 @@ html{
 .brand img {
 
     width: 78px;
+
     height: 78px;
 
     object-fit: cover;
@@ -161,7 +192,9 @@ html{
 
     cursor: pointer;
 
-    transition: 0.35s ease;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 
     box-shadow:
         0 6px 18px rgba(0, 0, 0, 0.25);
@@ -191,6 +224,8 @@ html{
     letter-spacing: 0.5px;
 
     white-space: nowrap;
+
+    text-align: center;
 }
 
 /* =========================================================
@@ -198,6 +233,13 @@ html{
 ========================================================= */
 
 .about-nav-btn {
+
+    justify-self: end;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
 
     color: white;
 
@@ -213,7 +255,11 @@ html{
 
     border-radius: 35px;
 
-    transition: 0.3s;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
     z-index: 101;
 }
@@ -224,6 +270,11 @@ html{
     background: white;
 
     color: #0d355d;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px rgba(255, 255, 255, 0.20);
 }
 
 /* =========================================================
