@@ -5110,3 +5110,955 @@ font-size:16px;
     line-height: 1.6;
 
 }
+
+/* =========================================================
+   NEO BRAND COLOUR ENHANCEMENT
+   ================================================
+   Colour-only enhancement.
+   DO NOT CHANGE HTML STRUCTURE.
+========================================================= */
+
+:root {
+
+    --neo-navy: #002b55;
+    --neo-dark-blue: #003f78;
+    --neo-blue: #0077cc;
+    --neo-bright-blue: #1496e8;
+    --neo-light-blue: #eaf4fc;
+    --neo-pale-blue: #f3f8fd;
+    --neo-border-blue: #cbdff0;
+
+    --neo-blue-shadow:
+        rgba(0, 83, 150, 0.14);
+
+    --neo-strong-shadow:
+        rgba(0, 119, 204, 0.22);
+}
+
+
+/* =========================================================
+   WEBSITE BACKGROUND
+========================================================= */
+
+body {
+
+    background:
+        linear-gradient(
+            180deg,
+            #eef5fb 0%,
+            #f7faff 45%,
+            #eef5fb 100%
+        );
+
+    color: #243447;
+}
+
+
+/* =========================================================
+   MAIN CARDS
+========================================================= */
+
+.card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8fbff 100%
+        );
+
+    border: 1px solid var(--neo-border-blue);
+
+    box-shadow:
+        0 12px 35px var(--neo-blue-shadow);
+
+}
+
+
+.card:hover {
+
+    box-shadow:
+        0 20px 45px var(--neo-strong-shadow);
+
+}
+
+
+/* =========================================================
+   CARD HEADINGS
+========================================================= */
+
+.card h2 {
+
+    color: var(--neo-navy);
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,0.8);
+
+}
+
+
+/* =========================================================
+   FOCUS AREA SECTION
+========================================================= */
+
+.focus-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #edf6fd 100%
+        );
+
+    border: 1px solid #cfe1f1;
+
+    box-shadow:
+        0 8px 22px rgba(0, 82, 145, 0.10);
+}
+
+
+.focus-card:hover {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #e7f3fc 100%
+        );
+
+    border-color:
+        #8fc4e8;
+
+    box-shadow:
+        0 14px 32px
+        rgba(0, 119, 204, 0.20);
+}
+
+
+/* Focus icons */
+
+.focus-card i {
+
+    background:
+        linear-gradient(
+            145deg,
+            #dff0fc,
+            #c7e5f8
+        );
+
+    color:
+        #006fba;
+
+    box-shadow:
+        0 5px 14px
+        rgba(0,119,204,0.12);
+}
+
+
+.focus-card:hover i {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0077cc,
+            #0055aa
+        );
+
+    color: white;
+
+    box-shadow:
+        0 7px 18px
+        rgba(0,119,204,0.30);
+}
+
+
+.focus-card h3 {
+
+    color:
+        #003b6f;
+}
+
+
+.focus-card p {
+
+    color:
+        #506477;
+}
+
+
+/* =========================================================
+   NEWS SECTION
+========================================================= */
+
+.section-grey {
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf5fc 0%,
+            #f7faff 100%
+        );
+}
+
+
+/* News cards */
+
+.news-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f7fbff 100%
+        );
+
+    border:
+        1px solid #cfe0ef;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 64, 120, 0.11);
+
+    position: relative;
+}
+
+
+/* Blue accent at top */
+
+.news-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #003366,
+            #0077cc,
+            #1496e8
+        );
+
+    z-index: 2;
+}
+
+
+.news-card:hover {
+
+    border-color:
+        #9cc8e7;
+
+    box-shadow:
+        0 16px 38px
+        rgba(0,119,204,0.20);
+}
+
+
+.news-content h3 {
+
+    color:
+        #003b70;
+}
+
+
+.news-content p {
+
+    color:
+        #536678;
+}
+
+
+/* =========================================================
+   NEWS BUTTONS
+========================================================= */
+
+.news-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0077cc,
+            #0055aa
+        );
+
+    box-shadow:
+        0 6px 16px
+        rgba(0,119,204,0.25);
+}
+
+
+.news-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0088df,
+            #0063bd
+        );
+
+    box-shadow:
+        0 10px 24px
+        rgba(0,119,204,0.38);
+}
+
+
+/* =========================================================
+   KPI CARDS
+========================================================= */
+
+.kpi-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f2f8fd 100%
+        );
+
+    border:
+        1px solid #cfe1f1;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,51,102,0.10);
+}
+
+
+.kpi-card::before {
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #003366,
+            #0077cc,
+            #1496e8
+        );
+}
+
+
+.kpi-card:hover {
+
+    border-color:
+        #8fc5e8;
+
+    box-shadow:
+        0 18px 40px
+        rgba(0,119,204,0.22);
+}
+
+
+.kpi-card h3 {
+
+    color:
+        #435b70;
+}
+
+
+.kpi-card h1 {
+
+    color:
+        #006fba;
+
+    text-shadow:
+        0 2px 10px
+        rgba(0,119,204,0.12);
+}
+
+
+/* =========================================================
+   CHART CONTAINERS
+========================================================= */
+
+.chart-container {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f7fbff 100%
+        );
+
+    border:
+        1px solid #cfe0ef;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,51,102,0.10);
+}
+
+
+.chart-container:hover {
+
+    border-color:
+        #9fc9e7;
+
+    box-shadow:
+        0 17px 40px
+        rgba(0,119,204,0.18);
+}
+
+
+/* =========================================================
+   DASHBOARD HEADERS
+========================================================= */
+
+.dashboard-header {
+
+    border-radius: 18px;
+}
+
+
+.dashboard-header h1,
+.dashboard-header h2 {
+
+    color:
+        #003366;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTONS
+========================================================= */
+
+.nav-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0077cc,
+            #004f99
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,119,204,0.30);
+}
+
+
+.nav-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0088df,
+            #0063bd
+        );
+
+    box-shadow:
+        0 14px 30px
+        rgba(0,119,204,0.42);
+}
+
+
+/* =========================================================
+   RESEARCH BUTTONS
+========================================================= */
+
+.research-btn,
+.research-nav-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0077cc,
+            #0055aa
+        );
+
+    box-shadow:
+        0 7px 20px
+        rgba(0,119,204,0.28);
+}
+
+
+.research-btn:hover,
+.research-nav-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0088df,
+            #0063bd
+        );
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,119,204,0.40);
+}
+
+
+/* =========================================================
+   TABLES
+========================================================= */
+
+.cost-table {
+
+    border:
+        1px solid #c9ddeb;
+
+    box-shadow:
+        0 10px 28px
+        rgba(0,51,102,0.10);
+}
+
+
+.cost-table th {
+
+    background:
+        linear-gradient(
+            135deg,
+            #002f5f,
+            #005b96
+        );
+}
+
+
+.cost-table tbody tr:hover {
+
+    background:
+        #eaf5fc;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f2f8fd
+        );
+
+    border-color:
+        #cbdfee;
+
+    box-shadow:
+        0 12px 32px
+        rgba(0,51,102,0.11);
+}
+
+
+.gallery-description {
+
+    background:
+        #edf6fc;
+
+    border:
+        1px solid #d1e3f1;
+}
+
+
+.gallery-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0077cc,
+            #0055aa
+        );
+
+    box-shadow:
+        0 7px 20px
+        rgba(0,119,204,0.30);
+}
+
+
+.gallery-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0088df,
+            #0063bd
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,119,204,0.40);
+}
+
+
+/* =========================================================
+   MANAGEMENT CARDS
+========================================================= */
+
+.management-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f4f9fd
+        );
+
+    border:
+        1px solid #cbdfee;
+
+    box-shadow:
+        0 12px 32px
+        rgba(0,51,102,0.10);
+}
+
+
+.management-member {
+
+    border:
+        1px solid #cbdfee;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,51,102,0.10);
+}
+
+
+.management-member:hover {
+
+    border-color:
+        #8fc5e8;
+
+    box-shadow:
+        0 15px 34px
+        rgba(0,119,204,0.20);
+}
+
+
+.member-info {
+
+    background:
+        #eef6fc;
+}
+
+
+.member-info h3 {
+
+    color:
+        #003b70;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+#about-section,
+.neo-gallery-section,
+#management-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf5fc,
+            #f7faff
+        );
+}
+
+
+.about-main-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f6faff
+        );
+
+    border:
+        1px solid #cbdfee;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,51,102,0.11);
+}
+
+
+.neo-stat {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #edf6fc
+        );
+
+    border:
+        1px solid #c9dfef;
+
+    box-shadow:
+        0 7px 20px
+        rgba(0,83,150,0.08);
+}
+
+
+.neo-stat:hover {
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,119,204,0.18);
+}
+
+
+.neo-stat h3 {
+
+    color:
+        #0077cc;
+}
+
+
+/* =========================================================
+   FOUNDER CARD
+========================================================= */
+
+.founder-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #edf6fc
+        );
+
+    border:
+        1px solid #c9dfef;
+
+    box-shadow:
+        0 10px 28px
+        rgba(0,51,102,0.10);
+}
+
+
+.founder-photo img {
+
+    border-color:
+        #0077cc;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,119,204,0.22);
+}
+
+
+/* =========================================================
+   RESEARCH CARDS
+========================================================= */
+
+.research-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f4f9fd
+        );
+
+    border:
+        1px solid #cbdfee;
+
+    box-shadow:
+        0 10px 28px
+        rgba(0,51,102,0.10);
+}
+
+
+.research-card:hover {
+
+    border-color:
+        #8fc5e8;
+
+    box-shadow:
+        0 17px 38px
+        rgba(0,119,204,0.20);
+}
+
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+
+.category-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f1f8fd
+        );
+
+    border:
+        1px solid #cbdfee;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,51,102,0.10);
+}
+
+
+/* =========================================================
+   UPLOAD / PORTAL CARDS
+========================================================= */
+
+.upload-card,
+.portal-card,
+.guideline-card,
+.submission-progress {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f3f9fd
+        );
+
+    border:
+        1px solid #cbdfee;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,51,102,0.10);
+}
+
+
+.upload-card:hover,
+.portal-card:hover {
+
+    border-color:
+        #91c5e7;
+
+    box-shadow:
+        0 17px 38px
+        rgba(0,119,204,0.20);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.research-section > h2,
+.publications-header h2,
+.gallery-section h2 {
+
+    color:
+        #003366;
+}
+
+
+/* Blue underline becomes stronger */
+
+.research-section > h2::after,
+.publications-header h2::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            #003366,
+            #0077cc,
+            #1496e8
+        );
+
+    box-shadow:
+        0 3px 10px
+        rgba(0,119,204,0.25);
+}
+
+
+/* =========================================================
+   TICKER
+========================================================= */
+
+.ticker {
+
+    background:
+        linear-gradient(
+            135deg,
+            #001f3f,
+            #003f78,
+            #005b96
+        );
+
+    box-shadow:
+        0 6px 20px
+        rgba(0,51,102,0.25);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    background:
+        linear-gradient(
+            135deg,
+            #001f3f 0%,
+            #003366 50%,
+            #004f85 100%
+        );
+
+    box-shadow:
+        0 -10px 30px
+        rgba(0,51,102,0.20);
+}
+
+
+/* =========================================================
+   GENERAL BLUE BUTTON IMPROVEMENT
+========================================================= */
+
+button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0077cc,
+            #0055aa
+        );
+
+    box-shadow:
+        0 7px 18px
+        rgba(0,119,204,0.25);
+}
+
+
+button:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0088df,
+            #0063bd
+        );
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,119,204,0.38);
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+
+    transition:
+        color .25s ease;
+}
+
+
+a:hover {
+
+    color:
+        #0077cc;
+}
