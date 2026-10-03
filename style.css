@@ -3003,6 +3003,70 @@ footer {
 }
 
 /* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+
+    margin-top: 20px;
+}
+
+
+.category-card {
+
+    background: #ffffff;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    border: 1px solid #e1eaf2;
+
+    color: #003f73;
+
+    font-size: 19px;
+
+    font-weight: 650;
+
+    box-shadow:
+        0 7px 22px rgba(0,51,102,.07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease,
+        color .3s ease;
+}
+
+
+.category-card:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d5fa5,
+            #1476c6
+        );
+
+    color: #ffffff;
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 28px rgba(20,118,198,.25);
+}
+
+
+/* =========================================================
    LATEST PUBLICATIONS
 ========================================================= */
 
