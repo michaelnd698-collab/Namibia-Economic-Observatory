@@ -80,54 +80,70 @@
        NAVIGATION
     ===================================================== */
 
+@media (max-width: 768px) {
+
     .navbar {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-        padding: 15px;
-        gap: 12px;
+        grid-template-columns: 1fr;
 
-        text-align: center;
-    }
+        justify-items: center;
 
-    .brand {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        gap: 15px;
 
-        gap: 10px;
-        margin-left: 0;
-    }
-
-    .brand img {
-        width: 55px;
-        height: 55px;
-        flex-shrink: 0;
-    }
-
-    .logo-text {
-        font-size: 20px;
-        white-space: normal;
+        padding: 15px 20px;
     }
 
     .research-nav-btn {
-        width: 100%;
-        max-width: 250px;
+
+        grid-column: 1;
+
+        justify-self: center;
+
+        font-size: 17px;
+
+        padding: 11px 22px;
+    }
+
+    .brand {
+
+        grid-column: 1;
+
+        grid-row: 2;
+
+        gap: 10px;
+
+        white-space: normal;
+
         text-align: center;
-        padding: 12px 20px;
-        font-size: 16px;
+    }
+
+    .brand img {
+
+        width: 58px;
+        height: 58px;
+    }
+
+    .logo-text {
+
+        font-size: 21px;
+
+        line-height: 1.2;
     }
 
     .about-nav-btn {
-        font-size: 16px;
-        padding: 10px 20px;
+
+        grid-column: 1;
+
+        grid-row: 3;
+
+        justify-self: center;
+
+        font-size: 17px;
+
+        padding: 10px 22px;
     }
-
-
+}
+   
     /* =====================================================
        HERO
     ===================================================== */
