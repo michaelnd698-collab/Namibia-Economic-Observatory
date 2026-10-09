@@ -3813,107 +3813,251 @@ footer {
 }
 
 /* ==========================================
-INTERACTIVE NAMIBIA MAP
+   NEO INTERACTIVE REGIONAL MAP
 ========================================== */
 
-.map-wrapper{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-align-items:flex-start;
-
-gap:30px;
-
-margin-top:35px;
-
+.neo-map-section {
+    width: 100%;
+    padding: 65px 5%;
+    background: #f3f7fc;
+    box-sizing: border-box;
 }
 
-#namibiaMap{
+/* SECTION HEADER */
 
-    width:100%;
-
-    max-width:500px;
-
-    height:auto;
-
-    background:#f8f9fa;
-
-    border-radius:20px;
-
-    padding:15px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-
-    pointer-events:auto;
+.neo-map-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 40px;
 }
 
-.region{
+.neo-map-header h2 {
+    margin: 0 0 14px;
+    color: #003366;
+    font-size: 34px;
+    font-weight: 750;
+}
 
-    fill:#b0c4de;
+.neo-map-header p {
+    margin: 0;
+    color: #596b7c;
+    font-size: 17px;
+    line-height: 1.7;
+}
 
-    stroke:#ffffff;
+/* TWO-COLUMN LAYOUT */
 
-    stroke-width:2;
+.map-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+    gap: 35px;
+    align-items: stretch;
+    max-width: 1250px;
+    margin: 0 auto;
+}
 
-    cursor:pointer;
+/* MAP CONTAINER */
 
-    pointer-events:all;
+.map-container {
+    min-width: 0;
+    min-height: 520px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #d7e5f4;
+    border-radius: 22px;
+    box-shadow: 0 12px 32px rgba(0, 51, 102, 0.10);
+}
 
+.map-instruction {
+    align-self: flex-start;
+    margin-bottom: 15px;
+    padding: 9px 15px;
+    color: #064b83;
+    background: #eaf4ff;
+    border: 1px solid #c9e1fa;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+/* SVG MAP HOLDER */
+
+.namibia-map {
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The actual SVG inserted into this holder */
+
+.namibia-map svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+}
+
+/* SVG REGION INTERACTION
+   These classes work when the SVG regions are
+   individual path/polygon elements. */
+
+.namibia-map svg [id],
+.namibia-map svg .region {
+    cursor: pointer;
     transition:
-        fill 0.3s ease,
-        transform 0.2s ease;
+        fill 0.2s ease,
+        opacity 0.2s ease,
+        stroke 0.2s ease;
 }
 
-.region:hover{
-
-    fill:#0077cc;
-
+.namibia-map svg .region:hover,
+.namibia-map svg [data-region]:hover {
+    opacity: 0.82;
+    stroke: #ffffff;
+    stroke-width: 2.5;
 }
 
-.region.active{
-
-    fill:#003366;
-
-    stroke:#ffcc00;
-
-    stroke-width:4;
-
-    filter:
-        drop-shadow(0 0 8px rgba(0,0,0,.35));
+.namibia-map svg .region.active,
+.namibia-map svg [data-region].active {
+    fill: #f0b323 !important;
+    stroke: #003366 !important;
+    stroke-width: 3;
 }
 
-.region-info{
+/* REGION INFORMATION CARD */
 
-background:white;
-
-padding:25px;
-
-border-radius:18px;
-
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-
-min-width:260px;
-
+.region-info {
+    min-width: 0;
+    padding: 32px;
+    background: linear-gradient(
+        145deg,
+        #ffffff 0%,
+        #f5f9ff 100%
+    );
+    border: 1px solid #d5e4f4;
+    border-top: 5px solid #0878c9;
+    border-radius: 22px;
+    box-shadow: 0 12px 32px rgba(0, 51, 102, 0.12);
+    display: flex;
+    flex-direction: column;
 }
 
-.region-info h3{
+/* INFORMATION HEADER */
 
-color:#003366;
-
-margin-bottom:15px;
-
+.region-info-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #dce7f2;
 }
 
-.region-info p{
+.region-info-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #e4f1ff;
+    border-radius: 15px;
+    font-size: 25px;
+}
 
-margin:10px 0;
+.region-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #1476c6;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
 
-font-size:16px;
+.region-info-header h3 {
+    margin: 0;
+    color: #003366;
+    font-size: 25px;
+    line-height: 1.3;
+}
 
+/* INTRODUCTION */
+
+.region-instruction {
+    margin: 22px 0;
+    color: #617184;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* REGIONAL DATA */
+
+.region-data-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.region-data-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #e0eaf5;
+    border-radius: 14px;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.region-data-item:hover {
+    transform: translateY(-2px);
+    border-color: #b9d8f5;
+    box-shadow: 0 7px 18px rgba(0, 92, 160, 0.09);
+}
+
+.region-data-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #eaf4ff;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.region-data-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #68798b;
+    font-size: 13px;
+}
+
+.region-data-item strong {
+    display: block;
+    color: #003366;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* FOOTER */
+
+.region-info-footer {
+    margin-top: auto;
+    padding-top: 25px;
+    color: #1476c6;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 /* ==========================================
