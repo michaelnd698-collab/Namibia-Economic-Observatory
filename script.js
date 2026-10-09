@@ -889,3 +889,289 @@ document.addEventListener(
 
     }
 );
+
+/* ==========================================
+   NEO INTERACTIVE NAMIBIA REGIONAL MAP
+========================================== */
+
+(() => {
+    "use strict";
+
+    const mapContainer = document.getElementById("namibiaMap");
+
+    // Do nothing if this page does not contain the map.
+    if (!mapContainer || mapContainer.dataset.initialized === "true") {
+        return;
+    }
+
+    mapContainer.dataset.initialized = "true";
+
+    const mapStatus = document.getElementById("mapStatus");
+
+    const fields = {
+        name: document.getElementById("regionName"),
+        capital: document.getElementById("regionCapital"),
+        population: document.getElementById("regionPopulation"),
+        employment: document.getElementById("regionEmployment"),
+        development: document.getElementById("regionDevelopment")
+    };
+
+    /*
+      The region IDs must match the IDs in your SVG.
+
+      Population, employment, and development figures are
+      intentionally left unavailable until verified data
+      is added.
+    */
+
+    const regions = {
+        NACA: {
+            name: "Zambezi",
+            capital: "Katima Mulilo"
+        },
+
+        NAER: {
+            name: "Erongo",
+            capital: "Swakopmund"
+        },
+
+        NAHA: {
+            name: "Hardap",
+            capital: "Mariental"
+        },
+
+        NAKA: {
+            name: "Karas",
+            capital: "Keetmanshoop"
+        },
+
+        NAKE: {
+            name: "Kavango East",
+            capital: "Rundu"
+        },
+
+        NAKH: {
+            name: "Khomas",
+            capital: "Windhoek"
+        },
+
+        NAKU: {
+            name: "Kunene",
+            capital: "Opuwo"
+        },
+
+        NAKW: {
+            name: "Kavango West",
+            capital: "Nkurenkuru"
+        },
+
+        NAOD: {
+            name: "Otjozondjupa",
+            capital: "Otjiwarongo"
+        },
+
+        NAOH: {
+            name: "Omaheke",
+            capital: "Gobabis"
+        },
+
+        NAON: {
+            name: "Oshana",
+            capital: "Oshakati"
+        },
+
+        NAOS: {
+            name: "Omusati",
+            capital: "Outapi"
+        },
+
+        NAOT: {
+            name: "Oshikoto",
+            capital: "Omuthiya"
+        },
+
+        NAOW: {
+            name: "Ohangwena",
+            capital: "Eenhana"
+        }
+    };
+
+    let selectedRegion = null;
+
+    function updateText(element, value) {
+        if (element) {
+            element.textContent = value;
+        }
+    }
+
+    function selectRegion(regionId) {
+        const region = regions[regionId];
+
+        if (!region) {
+            return;
+        }
+
+        selectedRegion = regionId;
+
+        // Remove the previous selection.
+        mapContainer
+            .querySelectorAll("#features path.is-selected")
+            .forEach(path => {
+                path.classList.remove("is-selected");
+                path.setAttribute("aria-pressed", "false");
+            });
+
+        // Highlight the selected region.
+        const selectedPath = mapContainer.querySelector(
+            `#features path[id="${regionId}"]`
+        );
+
+        if (selectedPath) {
+            selectedPath.classList.add("is-selected");
+            selectedPath.setAttribute("aria-pressed", "true");
+        }
+
+        // Update the regional information panel.
+        updateText(fields.name, region.name);
+        updateText(fields.capital, region.capital);
+
+        updateText(fields.population, "Data pending");
+        updateText(fields.employment, "Data pending");
+        updateText(fields.development, "Data pending");
+
+        updateText(
+            mapStatus,
+            `${region.name} selected. Regional economic indicators will be displayed when verified data is available.`
+        );
+    }
+
+    async function loadNamibiaMap() {
+        try {
+            /*
+              Keep "Namibian svg.svg" in the same directory
+              as the HTML page containing this map.
+
+              The encoded space (%20) allows the filename
+              to be requested correctly in the URL.
+            */
+
+            const response = await fetch("./Namibian%20svg.svg");
+
+            if (!response.ok) {
+                throw new Error(
+                    `The SVG file could not be loaded (HTTP ${response.status}).`
+                );
+            }
+
+            const svgText = await response.text();
+
+            const parser = new DOMParser();
+
+            const svgDocument = parser.parseFromString(
+                svgText,
+                "image/svg+xml"
+            );
+
+            if (svgDocument.querySelector("parsererror")) {
+                throw new Error("The SVG file could not be parsed.");
+            }
+
+            const svg = svgDocument.documentElement;
+
+            if (
+                svg.namespaceURI !== "http://www.w3.org/2000/svg" ||
+                svg.localName !== "svg"
+            ) {
+                throw new Error("The supplied file is not a valid SVG map.");
+            }
+
+            // Ensure that the SVG scales correctly in the webpage.
+            svg.setAttribute("viewBox", "0 0 1000 966");
+            svg.setAttribute("width", "1000");
+            svg.setAttribute("height", "966");
+            svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+            svg.removeAttribute("style");
+
+            /*
+              Add the map to the page.
+
+              Importing the SVG as a DOM node allows JavaScript
+              to access and select its individual region paths.
+            */
+
+            const importedSvg = document.importNode(svg, true);
+
+            mapContainer.replaceChildren(importedSvg);
+
+            // Check the expected regions and make them interactive.
+            let availableRegions = 0;
+
+            Object.entries(regions).forEach(([regionId, region]) => {
+                const path = mapContainer.querySelector(
+                    `#features path[id="${regionId}"]`
+                );
+
+                if (!path) {
+                    console.warn(
+                        `The SVG does not contain a path for ${region.name} (${regionId}).`
+                    );
+
+                    return;
+                }
+
+                availableRegions++;
+
+                path.setAttribute("role", "button");
+                path.setAttribute("tabindex", "0");
+                path.setAttribute("aria-label", region.name);
+                path.setAttribute("aria-pressed", "false");
+                path.setAttribute("title", region.name);
+
+                // Mouse and touch interaction.
+                path.addEventListener("click", () => {
+                    selectRegion(regionId);
+                });
+
+                // Keyboard interaction.
+                path.addEventListener("keydown", event => {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        selectRegion(regionId);
+                    }
+                });
+            });
+
+            if (availableRegions === 0) {
+                throw new Error(
+                    "No matching regional paths were found in the SVG."
+                );
+            }
+
+            updateText(
+                mapStatus,
+                `${availableRegions} of 14 regional shapes found. Select a region to view its profile.`
+            );
+
+            // Start with a region selected so the panel is useful.
+            selectRegion("NAKH");
+
+        } catch (error) {
+            console.error("NEO regional map error:", error);
+
+            mapContainer.innerHTML = `
+                <p class="map-loading-message">
+                    The regional map could not be loaded.
+                    Check the SVG filename, file location,
+                    and browser console.
+                </p>
+            `;
+
+            updateText(
+                mapStatus,
+                "Map loading failed. Confirm that the SVG file is available at the configured path."
+            );
+        }
+    }
+
+    loadNamibiaMap();
+})();
