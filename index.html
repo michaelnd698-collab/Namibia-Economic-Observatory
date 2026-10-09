@@ -1253,116 +1253,91 @@ Compare Namibia's 14 regions using key economic indicators.
 
 </div>
 
-<!-- ==========================================
-     INTERACTIVE NAMIBIA REGIONAL MAP
-========================================== -->
+<!-- NEO INTERACTIVE NAMIBIA MAP -->
+<section class="neo-regional-map-section">
 
-<section class="neo-map-section">
+    <div class="neo-map-heading">
+        <h2>Namibia Regional Economic Observatory</h2>
 
-    <div class="neo-map-header">
-        <h2>Explore Namibia's Regions</h2>
         <p>
-            Select a region on the map to explore its
-            demographic and economic information.
+            Explore Namibia's regions and view their economic
+            and development indicators.
         </p>
     </div>
 
-    <div class="map-wrapper">
+    <div class="neo-map-layout">
 
-        <!-- LEFT: INTERACTIVE MAP -->
-        <div class="map-container">
+        <!-- MAP CONTAINER -->
+        <div class="neo-map-card">
 
-            <div class="map-instruction">
-                <span>📍</span>
-                Click a region to explore
+            <div class="neo-map-toolbar">
+                <h3>Explore the Regions</h3>
+
+                <span class="neo-map-hint">
+                    Select a region on the map
+                </span>
             </div>
 
-            <!-- Your existing SVG map -->
-            <div id="namibiaMap" class="namibia-map">
-                <!-- The SVG will be inserted here by JavaScript -->
+            <div
+                id="namibiaMap"
+                class="neo-map-canvas"
+                aria-label="Interactive map of Namibia"
+            >
+                <p class="map-loading-message">
+                    Loading Namibia's regional map...
+                </p>
             </div>
 
-        </div>
-
-        <!-- RIGHT: REGIONAL INFORMATION -->
-        <div class="region-info" id="regionInfo">
-
-            <div class="region-info-header">
-                <span class="region-info-icon">📊</span>
-
-                <div>
-                    <span class="region-label">
-                        REGIONAL PROFILE
-                    </span>
-
-                    <h3 id="regionName">
-                        Select a Region
-                    </h3>
-                </div>
-            </div>
-
-            <p class="region-instruction">
-                Select any region on the map to view
-                its available economic and demographic data.
+            <p id="mapStatus" class="neo-map-status" aria-live="polite">
+                Select a region to explore its information.
             </p>
 
-            <div class="region-data-list">
-
-                <div class="region-data-item">
-                    <span class="region-data-icon">🏙️</span>
-
-                    <div>
-                        <span class="region-data-label">
-                            Capital
-                        </span>
-
-                        <strong id="regionCapital">—</strong>
-                    </div>
-                </div>
-
-                <div class="region-data-item">
-                    <span class="region-data-icon">👥</span>
-
-                    <div>
-                        <span class="region-data-label">
-                            Population
-                        </span>
-
-                        <strong id="regionPopulation">—</strong>
-                    </div>
-                </div>
-
-                <div class="region-data-item">
-                    <span class="region-data-icon">💼</span>
-
-                    <div>
-                        <span class="region-data-label">
-                            Employment
-                        </span>
-
-                        <strong id="regionEmployment">—</strong>
-                    </div>
-                </div>
-
-                <div class="region-data-item">
-                    <span class="region-data-icon">📈</span>
-
-                    <div>
-                        <span class="region-data-label">
-                            Development
-                        </span>
-
-                        <strong id="regionDevelopment">—</strong>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="region-info-footer">
-                Namibia Economic Observatory
-            </div>
-
         </div>
+
+        <!-- REGIONAL INFORMATION PANEL -->
+        <aside class="neo-region-panel">
+
+            <span class="neo-region-label">
+                REGIONAL PROFILE
+            </span>
+
+            <h3 id="regionName">Select a Region</h3>
+
+            <p class="neo-region-instruction">
+                Select one of the regions on the map to view
+                its profile.
+            </p>
+
+            <div class="neo-region-stat">
+                <span>Regional capital</span>
+                <strong id="regionCapital">Not selected</strong>
+            </div>
+
+            <div class="neo-region-stat">
+                <span>Population</span>
+                <strong id="regionPopulation">Data pending</strong>
+            </div>
+
+            <div class="neo-region-stat">
+                <span>Employment</span>
+                <strong id="regionEmployment">Data pending</strong>
+            </div>
+
+            <div class="neo-region-stat">
+                <span>Development indicators</span>
+                <strong id="regionDevelopment">Data pending</strong>
+            </div>
+
+            <div class="neo-data-note">
+                <strong>Data transparency</strong>
+
+                <p>
+                    Economic indicators will be displayed when
+                    verified regional data becomes available.
+                </p>
+            </div>
+
+        </aside>
 
     </div>
 
