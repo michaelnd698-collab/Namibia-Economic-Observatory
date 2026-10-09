@@ -1118,35 +1118,63 @@
     font-size: 14px;
 }
 
+/* ==========================================
+   MOBILE RESPONSIVENESS INTERACTIVE MAP
+========================================== */
 
-/* =====================================================
-   MAP
-===================================================== */
+@media (max-width: 850px) {
 
-.map-wrapper {
-    flex-direction: column;
+    .neo-map-section {
+        padding: 45px 4%;
+    }
 
-    align-items: center;
+    .map-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
 
-    gap: 20px;
+    .map-container {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .namibia-map {
+        max-width: 500px;
+    }
+
+    .region-info {
+        padding: 25px;
+    }
 }
 
-#namibiaMap {
-    width: 100%;
+@media (max-width: 480px) {
 
-    max-width: 340px;
+    .neo-map-header h2 {
+        font-size: 27px;
+    }
 
-    height: auto;
+    .neo-map-header p {
+        font-size: 15px;
+    }
+
+    .map-container {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .region-info {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .region-info-header h3 {
+        font-size: 22px;
+    }
+
+    .region-data-item {
+        padding: 13px;
+    }
 }
-
-.region-info {
-    width: 100%;
-
-    max-width: 400px;
-
-    min-width: 0;
-}
-
 
 /* =====================================================
    KPI CARDS
