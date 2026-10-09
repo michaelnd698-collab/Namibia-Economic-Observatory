@@ -1253,31 +1253,120 @@ Compare Namibia's 14 regions using key economic indicators.
 
 </div>
 
-<!-- INTERACTIVE NAMIBIA MAP -->
+<!-- ==========================================
+     INTERACTIVE NAMIBIA REGIONAL MAP
+========================================== -->
 
-<div class="map-wrapper">
+<section class="neo-map-section">
 
-<img src="Namibian svg.svg">    
+    <div class="neo-map-header">
+        <h2>Explore Namibia's Regions</h2>
+        <p>
+            Select a region on the map to explore its
+            demographic and economic information.
+        </p>
+    </div>
 
-<div class="region-info">
+    <div class="map-wrapper">
 
-<h3 id="regionName">Select a Region</h3>
+        <!-- LEFT: INTERACTIVE MAP -->
+        <div class="map-container">
 
-<p><strong>Capital:</strong>
-<span id="regionCapital">-</span></p>
+            <div class="map-instruction">
+                <span>📍</span>
+                Click a region to explore
+            </div>
 
-<p><strong>Population:</strong>
-<span id="regionPopulation">-</span></p>
+            <!-- Your existing SVG map -->
+            <div id="namibiaMap" class="namibia-map">
+                <!-- The SVG will be inserted here by JavaScript -->
+            </div>
 
-<p><strong>Employment:</strong>
-<span id="regionEmployment">-</span></p>
+        </div>
 
-<p><strong>Development:</strong>
-<span id="regionDevelopment">-</span></p>
+        <!-- RIGHT: REGIONAL INFORMATION -->
+        <div class="region-info" id="regionInfo">
 
-</div>
+            <div class="region-info-header">
+                <span class="region-info-icon">📊</span>
 
-</div>
+                <div>
+                    <span class="region-label">
+                        REGIONAL PROFILE
+                    </span>
+
+                    <h3 id="regionName">
+                        Select a Region
+                    </h3>
+                </div>
+            </div>
+
+            <p class="region-instruction">
+                Select any region on the map to view
+                its available economic and demographic data.
+            </p>
+
+            <div class="region-data-list">
+
+                <div class="region-data-item">
+                    <span class="region-data-icon">🏙️</span>
+
+                    <div>
+                        <span class="region-data-label">
+                            Capital
+                        </span>
+
+                        <strong id="regionCapital">—</strong>
+                    </div>
+                </div>
+
+                <div class="region-data-item">
+                    <span class="region-data-icon">👥</span>
+
+                    <div>
+                        <span class="region-data-label">
+                            Population
+                        </span>
+
+                        <strong id="regionPopulation">—</strong>
+                    </div>
+                </div>
+
+                <div class="region-data-item">
+                    <span class="region-data-icon">💼</span>
+
+                    <div>
+                        <span class="region-data-label">
+                            Employment
+                        </span>
+
+                        <strong id="regionEmployment">—</strong>
+                    </div>
+                </div>
+
+                <div class="region-data-item">
+                    <span class="region-data-icon">📈</span>
+
+                    <div>
+                        <span class="region-data-label">
+                            Development
+                        </span>
+
+                        <strong id="regionDevelopment">—</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="region-info-footer">
+                Namibia Economic Observatory
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <h3 style="margin-top:40px;">
 
