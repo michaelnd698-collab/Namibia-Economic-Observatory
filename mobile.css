@@ -1001,56 +1001,93 @@
 }
 
 
-    /* =========================================
-   NEO DATA COLLECTION PORTAL — MOBILE FIX
-========================================= */
+   /* ==========================================
+   NEO DATA COLLECTION PORTAL
+   MOBILE HORIZONTAL SCROLL FIX
+========================================== */
 
 @media screen and (max-width: 768px) {
 
-    /* Allow the table area to scroll horizontally */
-    .portal-table-wrapper {
+    /* Keep the portal within the phone screen */
+    .research-section {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Make the regional list independently scrollable */
+    .regional-template-list {
+        display: block !important;
         width: 100%;
         max-width: 100%;
-        overflow-x: auto;
+        overflow-x: auto !important;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
         touch-action: pan-x pan-y;
+        padding-bottom: 12px;
+        box-sizing: border-box;
     }
 
-    /* Preserve the table columns instead of squeezing them */
-    .portal-table-wrapper table {
-        width: max-content;
-        min-width: 900px;
-        border-collapse: collapse;
+    /* Keep the header columns aligned */
+    .regional-list-header,
+    .regional-row {
+        display: grid !important;
+        grid-template-columns:
+            145px
+            170px
+            190px
+            150px
+            125px !important;
+
+        width: max-content !important;
+        min-width: 780px;
+        box-sizing: border-box;
     }
 
-    /* Keep each column readable */
-    .portal-table-wrapper th,
-    .portal-table-wrapper td {
+    /* Prevent text from squeezing the columns */
+    .regional-list-header > div,
+    .regional-row > div {
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .regional-row .region-name,
+    .regional-row .template-name,
+    .regional-row .reporting-quarter {
+        overflow-wrap: break-word;
+    }
+
+    /* Keep the status readable */
+    .regional-row .status {
         white-space: nowrap;
-        padding: 12px 14px;
-        vertical-align: middle;
+        font-size: 12px;
     }
 
-    /* Keep download buttons accessible */
-    .portal-table-wrapper .download-btn,
-    .portal-table-wrapper a {
-        display: inline-block;
+    /* Keep download buttons visible and clickable */
+    .regional-row .regional-download {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 9px 12px;
         white-space: nowrap;
+        box-sizing: border-box;
     }
 
-    /* Make the horizontal scrollbar visible where supported */
-    .portal-table-wrapper::-webkit-scrollbar {
+    /* Make the scrolling bar visible where supported */
+    .regional-template-list::-webkit-scrollbar {
         height: 8px;
     }
 
-    .portal-table-wrapper::-webkit-scrollbar-thumb {
-        background: #2472b8;
-        border-radius: 10px;
+    .regional-template-list::-webkit-scrollbar-track {
+        background: #e8eef5;
+        border-radius: 8px;
     }
 
-    .portal-table-wrapper::-webkit-scrollbar-track {
-        background: #e8eef5;
+    .regional-template-list::-webkit-scrollbar-thumb {
+        background: #2472b8;
+        border-radius: 8px;
     }
 }
 
