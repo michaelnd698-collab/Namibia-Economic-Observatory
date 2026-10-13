@@ -1001,32 +1001,58 @@
 }
 
 
-    /* =====================================================
-       DATA COLLECTION PORTAL
-    ===================================================== */
+    /* =========================================
+   NEO DATA COLLECTION PORTAL — MOBILE FIX
+========================================= */
 
-    .portal-intro {
-        width: 94%;
-        font-size: 16px;
+@media screen and (max-width: 768px) {
+
+    /* Allow the table area to scroll horizontally */
+    .portal-table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x pan-y;
     }
 
-    .portal-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+    /* Preserve the table columns instead of squeezing them */
+    .portal-table-wrapper table {
+        width: max-content;
+        min-width: 900px;
+        border-collapse: collapse;
     }
 
-    .portal-card {
-        padding: 25px 18px;
+    /* Keep each column readable */
+    .portal-table-wrapper th,
+    .portal-table-wrapper td {
+        white-space: nowrap;
+        padding: 12px 14px;
+        vertical-align: middle;
     }
 
-    .guideline-card {
-        padding: 25px 18px;
+    /* Keep download buttons accessible */
+    .portal-table-wrapper .download-btn,
+    .portal-table-wrapper a {
+        display: inline-block;
+        white-space: nowrap;
     }
 
-    .guideline-card ul {
-        font-size: 15px;
+    /* Make the horizontal scrollbar visible where supported */
+    .portal-table-wrapper::-webkit-scrollbar {
+        height: 8px;
     }
 
+    .portal-table-wrapper::-webkit-scrollbar-thumb {
+        background: #2472b8;
+        border-radius: 10px;
+    }
+
+    .portal-table-wrapper::-webkit-scrollbar-track {
+        background: #e8eef5;
+    }
+}
 
     /* =====================================================
        KPI DASHBOARD
