@@ -246,7 +246,7 @@ function createTradeChart() {
                    16.22,
                    15.96,
                    16.15,
-                   16.54
+                   16.21
                 ],
 
                 borderColor: "#009966",
