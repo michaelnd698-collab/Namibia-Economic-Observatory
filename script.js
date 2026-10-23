@@ -766,131 +766,86 @@ function showBoardManagement(){
 
 }
 
-/* =========================================================
+/* ==========================================
    NEO GALLERY
-========================================================= */
+========================================== */
 
 const galleryImages = [
-
     {
-        image: "Nam currency.png",
-        title: "Namibian Currency & Economic Data",
-        description:
-            "Economic data initiatives and visualisations relating to Namibia's monetary and economic environment."
+        src: "Nam currency.png",
+        alt: "Namibia currency and economic research",
+        title: "Namibia Economic Research",
+        text: "Economic research, data analysis and initiatives undertaken by the Namibia Economic Observatory."
     },
-
     {
-        image: "Heart of Namibia.png",
-        title: "Research Across Namibia",
-        description:
-            "Showcasing the NEO focus on regional research, economic data and evidence-based insights."
+        src: "Heart of Namibia.png",
+        alt: "Namibia Economic Observatory logo",
+        title: "Namibia Economic Observatory",
+        text: "Building economic knowledge through research, data and regional analysis."
     }
-
 ];
 
+let currentGalleryIndex = 0;
+let galleryChangeInProgress = false;
 
-let currentGalleryImage = 0;
+function changeGalleryImage(direction) {
+    if (galleryChangeInProgress || galleryImages.length === 0) {
+        return;
+    }
 
+    const imageElement = document.getElementById("galleryImage");
+    const titleElement = document.getElementById("galleryTitle");
+    const textElement = document.getElementById("galleryText");
+    const counterElement = document.getElementById("galleryCounter");
 
+    if (!imageElement || !titleElement || !textElement || !counterElement) {
+        console.error("NEO Gallery: One or more HTML elements are missing.");
+        return;
+    }
 
-function updateGallery() {
+    const nextIndex =
+        (currentGalleryIndex + direction + galleryImages.length)
+        % galleryImages.length;
 
-    const image =
-        document.getElementById("galleryImage");
+    const nextImage = galleryImages[nextIndex];
 
-    const counter =
-        document.getElementById("galleryCounter");
+    galleryChangeInProgress = true;
 
-    const title =
-        document.getElementById("galleryTitle");
+    // Load the next image separately before updating the gallery.
+    const preloader = new Image();
 
-    const text =
-        document.getElementById("galleryText");
+    preloader.onload = function () {
+        imageElement.src = nextImage.src;
+        imageElement.alt = nextImage.alt;
 
+        titleElement.textContent = nextImage.title;
+        textElement.textContent = nextImage.text;
+        counterElement.textContent =
+            `${nextIndex + 1} / ${galleryImages.length}`;
 
-    if (!image) return;
+        currentGalleryIndex = nextIndex;
+        galleryChangeInProgress = false;
+    };
 
+    preloader.onerror = function () {
+        console.error(
+            "NEO Gallery: Could not load image:",
+            nextImage.src
+        );
 
-    const current =
-        galleryImages[currentGalleryImage];
+        galleryChangeInProgress = false;
+    };
 
-
-    image.style.opacity = "0";
-
-
-    setTimeout(function () {
-
-        image.src = current.image;
-
-        image.alt = current.title;
-
-        if (title) {
-            title.textContent = current.title;
-        }
-
-        if (text) {
-            text.textContent = current.description;
-        }
-
-        if (counter) {
-            counter.textContent =
-                `${currentGalleryImage + 1} / ${galleryImages.length}`;
-        }
-
-        image.style.opacity = "1";
-
-    }, 150);
-
+    preloader.src = nextImage.src;
 }
-
-
 
 function nextGalleryImage() {
-
-    currentGalleryImage++;
-
-    if (
-        currentGalleryImage >=
-        galleryImages.length
-    ) {
-
-        currentGalleryImage = 0;
-
-    }
-
-    updateGallery();
-
+    changeGalleryImage(1);
 }
-
-
 
 function previousGalleryImage() {
-
-    currentGalleryImage--;
-
-    if (
-        currentGalleryImage < 0
-    ) {
-
-        currentGalleryImage =
-            galleryImages.length - 1;
-
-    }
-
-    updateGallery();
-
+    changeGalleryImage(-1);
 }
-
-
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        updateGallery();
-
-    }
-);
 
 /* ==========================================
    NEO INTERACTIVE NAMIBIA REGIONAL MAP
