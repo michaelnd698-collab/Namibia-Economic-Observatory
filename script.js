@@ -229,7 +229,8 @@ function createTradeChart() {
                "Jul",
                "Aug",
                "Sep",
-               "Oct"
+               "Oct",
+               "Nov"
              ],
 
             datasets: [{
@@ -246,7 +247,8 @@ function createTradeChart() {
                    16.22,
                    15.96,
                    16.15,
-                   16.21
+                   16.32,
+                   16.60 
                 ],
 
                 borderColor: "#009966",
