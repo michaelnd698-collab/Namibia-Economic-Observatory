@@ -1087,37 +1087,145 @@ footer {
 
 
 /* =========================================================
-   DASHBOARD HEADER
+   NEO DASHBOARD HEADER — MODERN DESIGN
 ========================================================= */
 
 .dashboard-header {
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    padding: 25px 30px;
 
     flex-wrap: wrap;
-
     gap: 20px;
 
 }
 
-
-/* Dashboard title */
+/* Dashboard title box */
 
 .dashboard-header h1,
 .dashboard-header h2 {
 
-    color: #003366;
+    display: inline-block;
 
-    font-weight: 700;
+    margin: 0 auto;
+
+    padding: 18px 35px;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #064477,
+        #0879c9,
+        #064477
+    );
+
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+
+    text-align: center;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 8px 22px rgba(0, 78, 140, 0.22),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 
 }
 
+/* Subtle hover effect */
+
+.dashboard-header h1:hover,
+.dashboard-header h2:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 78, 140, 0.3),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+
+}
+
+/* Dashboard title entrance animation */
+
+.dashboard-header h1.dashboard-title-animate,
+.dashboard-header h2.dashboard-title-animate {
+
+    animation: dashboardTitleEntrance 0.65s ease both;
+
+}
+
+@keyframes dashboardTitleEntrance {
+
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.01);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+/* Mobile responsiveness */
+
+@media screen and (max-width: 768px) {
+
+    .dashboard-header {
+
+        justify-content: center;
+        text-align: center;
+        padding: 15px 10px;
+        gap: 15px;
+
+    }
+
+    .dashboard-header h1,
+    .dashboard-header h2 {
+
+        width: 100%;
+        padding: 15px 12px;
+        font-size: 1.45rem;
+        box-sizing: border-box;
+
+    }
+
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .dashboard-header h1,
+    .dashboard-header h2 {
+
+        animation: none !important;
+        transition: none !important;
+
+    }
+
+}
 
 /* =========================================================
    DASHBOARD DESCRIPTION
