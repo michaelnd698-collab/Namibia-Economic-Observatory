@@ -1134,3 +1134,46 @@ function previousGalleryImage() {
 
     loadNamibiaMap();
 })();
+
+/* =========================================================
+   NEO DASHBOARD TITLE TRANSITION
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dashboardHeader = document.querySelector(".dashboard-header");
+
+    if (!dashboardHeader) return;
+
+    const dashboardTitle = dashboardHeader.querySelector("h1, h2");
+
+    if (!dashboardTitle) return;
+
+    function animateDashboardTitle() {
+
+        dashboardTitle.classList.remove("dashboard-title-animate");
+
+        // Restart the animation.
+        void dashboardTitle.offsetWidth;
+
+        dashboardTitle.classList.add("dashboard-title-animate");
+
+    }
+
+    // Animate when Previous or Next is clicked.
+    dashboardHeader.addEventListener("click", function (event) {
+
+        const button = event.target.closest("button");
+
+        if (!button || !dashboardHeader.contains(button)) return;
+
+        if (
+            button.textContent.toLowerCase().includes("previous") ||
+            button.textContent.toLowerCase().includes("next")
+        ) {
+            animateDashboardTitle();
+        }
+
+    });
+
+});
