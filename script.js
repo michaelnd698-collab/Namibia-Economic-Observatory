@@ -133,10 +133,10 @@ function createInflationChart() {
                     5.6
                 ],
 
-                borderColor: "#0077cc",
+                borderColor: "#dc2626",
 
                 backgroundColor:
-                    "rgba(0,119,204,0.2)",
+                    "rgba(220, 38, 38, 0.2)",
 
                 fill: true,
 
