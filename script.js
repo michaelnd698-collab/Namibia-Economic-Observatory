@@ -112,7 +112,8 @@ function createInflationChart() {
                "Jun",
                "Jul",
                "Aug",
-               "Sep"
+               "Sep",
+               "Oct"
             ],
 
             datasets: [{
@@ -128,7 +129,8 @@ function createInflationChart() {
                     4.4,
                     4.4,
                     5.0,
-                    5.4
+                    5.4,
+                    5.6
                 ],
 
                 borderColor: "#0077cc",
